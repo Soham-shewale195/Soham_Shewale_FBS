@@ -1,0 +1,383 @@
+Full Name
+*
+First Name - Middle Name - Last Name
+Soham Mahesh Shewale
+
+Question 1 : int a = printf("firstBit") && printf("Solutions");
+printf("%d", a);
+
+
+(a) firstBitSolutions0
+(b) firstBitSolutions1
+(c) SolutionsfirstBit1
+(d) firstBitSolutions01
+
+Question 2. Which of the following is an arithmetic operator?
+
+(a) &&
+(b) =
+(c) ==
+(d) +
+
+Question 3 :
+int a = printf("one");
+int b = printf("two");
+int c = a || b;
+printf("%d", c);
+
+(a) onetwo1
+(b) onetwo0
+(c) one0two
+(d) one1two
+
+Question 4 : What will be the result of 10 / 4 in C?
+
+(a) 2.5
+(b) 2
+(c) 3
+(d) 0
+
+Question 5 :
+int x = printf("") || printf("");
+printf("%d", x);
+
+(a) 0
+(b) 1
+(c) Garbage Value
+(d) Compilation Error
+
+Question 6 : Which operator is used for comparison?
+
+(a) =
+(b) ==
+(c) +=
+(d) &&
+
+Question 7:
+int a = printf("A");
+int b = printf("B");
+int c = a && b;
+printf("%d", c);
+
+(a) AB0
+(b) AB1
+(c) A0B
+(d) 0AB
+
+Question 8 : What is the output of printf("%d", 7 % 3);?
+
+(a) 2
+(b) 1
+(c) 3
+(c) 0
+
+Question 9 :
+int a = printf("") && printf("java");
+printf("%d", a);
+*
+5 points
+(a) java0
+(b) java1
+(c) 0java
+(d) 0
+
+Question 10 : Which operator has the highest precedence?
+*
+5 points
+(a) *
+(b) ()
+(c) =
+(d) &&
+
+Question 11 : What does a += 3; mean?
+
+(a) a = a + 3
+(b) a = 3
+(c) a = 3 + 3
+(d) Error
+
+Question 12 : What is the output of printf("%d", 5 > 3);?
+
+(a) 1
+(b) 0
+(c) error
+(d) true
+
+Question 13 :
+int a = printf("") || printf("firstbit");
+printf("%d", a);
+
+(a) firstbit1
+(b) firstbit0
+(c) 0firstbit
+(d) 1firstbit
+Question 14 : What is the type of operator &&?
+
+(a) Arithmetic
+(b) Relational
+(c) Logical
+(d) Assignment
+
+Question 15 :
+int a = printf("abc");
+a = printf("xyz");
+printf("%d", a);
+
+(a) abcxyz3
+(b) xyzabc3
+(c) abcxyz0
+(d) abcxyz6
+
+Question 16 : What is the result of 3 > 2 && 4 < 5?
+
+(a) 1
+(b) 0
+(c) true
+(d) false
+
+Question 17 : What is the meaning of a = b++;?
+
+(a) a is assigned b, then b is incremented
+(b) a is assigned b+1
+(c) a and b both are incremented
+(d) Error
+
+Question 18 : In x = y = 5, which assignment happens first?
+
+(a) x = y
+(b) y = 5
+(c) x = 5
+(d) Both simultaneously
+
+Question 19 :
+What will be the output of printf("%d", 5 < 3 || 4 < 10);?
+
+(a) 0
+(b) 1
+(c) true
+(d) false
+
+Question 20 : 
+int a = 3;  
+printf("%d", a++ + ++a);
+
+(a) 6
+(b) 7
+(c) Undefined Behaviour
+(d) 8
+
+Question 21 :
+int x = 5;  
+printf("%d", x != 5);
+
+(a) 1
+(b) 0
+(c) 5
+(d) error
+
+Question 22 : 
+int a = 2, b = 3;  
+printf("%d", a * b + b);
+
+(a) 9
+(b) 11
+(c) 7
+(d) 5
+
+Question 23 : printf("%d", printf("%d", 123));
+
+(a) 1233
+(b) 123
+(c) 1232
+(d) 1231
+
+Question 24 : 
+int a = 2;  
+a = a++ * 2;  
+printf("%d", a);
+
+(a) 4
+(b) 6
+(c) 2
+(d) Undefined Behaviour
+
+Question 25 : 
+int a = 0;  
+printf("%d", a || a++);  
+printf("%d", a);
+
+(a) 01
+(b) 00
+(c) 10
+(d) 11
+
+Question 26 : Which of the following expressions is valid in printf() and returns 2?
+
+(a) printf("%d", 1 + 1);
+(b) printf("%d", 2);
+(c) printf("%d", 5 - 3);
+(d) All of the above
+
+Question 27 :
+int x = 0;
+x = x++ + x++ + x++;
+printf("%d", x);
+
+(a) 3
+(b) 6
+(c) 2
+(d) Undefined Behaviour
+
+Question 28 : 
+int a = 10;
+int b = printf("%d", a = a--);
+printf(" %d %d",a,b);
+
+(a) 10 10 2
+(b) 10 9 0
+(c) Undefined
+(d) Compilation Error
+
+Question 29 :
+printf("%d", printf("%d", printf("A")));
+
+(a) A12
+(b) A11
+(c) A21
+(d) A1
+
+Question 30 :
+int c = printf("%c", 'A' + 1);
+printf(" %d",c);
+
+(a) 66 2
+(b) A+1
+(c) B 1
+(d) Compilation Error
+
+
+<----------------------------------------------------------------------------ANSWERS------------------------------------------------------------------ >
+
+✅ C Language Test Answers with Tips
+
+Q1. int a = printf("firstBit") && printf("Solutions"); printf("%d", a);
+✔ Correct: (b) firstBitSolutions1
+💡 Tip: printf returns number of characters. Both non-zero → && = 1.
+
+Q2. Which is arithmetic operator?
+✔ Correct: (d) +
+💡 *Tip: Arithmetic → +, -, , /, %. Logical/relational ≠ arithmetic.
+
+Q3. int a = printf("one"); int b = printf("two"); int c = a || b; printf("%d", c);
+✔ Correct: (a) onetwo1
+💡 Tip: || → true if any operand ≠ 0.
+
+Q4. Result of 10 / 4
+✔ Correct: (b) 2
+💡 Tip: Integer division drops the decimal.
+
+Q5. int x = printf("") || printf(""); printf("%d", x);
+✔ Correct: (a) 0
+💡 Tip: printf("") prints nothing, returns 0.
+
+Q6. Which operator is comparison?
+✔ Correct: (b) ==
+💡 Tip: = assigns, == compares.
+
+Q7. int a = printf("A"); int b = printf("B"); int c = a && b; printf("%d", c);
+✔ Correct: (b) AB1
+💡 Tip: Both non-zero → && gives 1.
+
+Q8. printf("%d", 7 % 3);
+✔ Correct: (b) 1
+💡 Tip: % gives remainder.
+
+Q9. int a = printf("") && printf("java"); printf("%d", a);
+✔ Correct: (d) 0
+💡 Tip: First operand 0 → && short-circuits.
+
+Q10. Operator with highest precedence?
+✔ Correct: (b) ()
+💡 Tip: Parentheses always win.
+
+Q11. Meaning of a += 3
+✔ Correct: a = a + 3
+💡 Tip: Shorthand assignment.
+
+Q12. printf("%d", 5 > 3);
+✔ Correct: (a) 1
+💡 Tip: True → 1, False → 0.
+
+Q13. int a = printf("") || printf("firstbit"); printf("%d", a);
+✔ Correct: (a) firstbit1
+💡 Tip: First 0 → second executes → returns 1.
+
+Q14. Type of operator &&
+✔ Correct: (c) Logical
+💡 Tip: &&, ||, ! → logical operators.
+
+Q15. int a = printf("abc"); a = printf("xyz"); printf("%d", a);
+✔ Correct: (b) xyzabc3
+💡 Tip: Last printf("xyz") prints 3 chars → returns 3.
+
+Q16. 3 > 2 && 4 < 5
+✔ Correct: (a) 1
+💡 Tip: True && True = 1.
+
+Q17. Meaning of a = b++;
+✔ Correct: (a) a = b, then b++
+💡 Tip: Post-increment happens after use.
+
+Q18. In x = y = 5 which first?
+✔ Correct: (b) y = 5
+💡 Tip: Assignment works right to left.
+
+Q19. printf("%d", 5 < 3 || 4 < 10);
+✔ Correct: (b) 1
+💡 Tip: False || True → 1.
+
+Q20. int a=3; printf("%d", a++ + ++a);
+✔ Correct: (c) Undefined Behaviour
+💡 Tip: Don’t modify a twice without sequence point.
+
+Q21. int x=5; printf("%d", x != 5);
+✔ Correct: (b) 0
+💡 Tip: != returns 0 if equal.
+
+Q22. int a=2, b=3; printf("%d", a * b + b);
+✔ Correct: (a) 9
+💡 Tip: 23+3 = 9.*
+
+Q23. printf("%d", printf("%d", 123));
+✔ Correct: (a) 1233
+💡 Tip: Inner prints 123, returns 3 → outer prints 3.
+
+Q24. int a=2; a = a++ * 2; printf("%d", a);
+✔ Correct: (d) Undefined Behaviour
+💡 Tip: Avoid a++ and assignment same time.
+
+Q25. int a=0; printf("%d", a || a++); printf("%d", a);
+✔ Correct: (b) 00
+💡 Tip: Short-circuit: a++ never runs.
+
+Q26. Valid expression returning 2 in printf()?
+✔ Correct: (d) All of the above
+💡 Tip: 1+1, 2, 5-3 all → 2.
+
+Q27. int x=0; x = x++ + x++ + x++; printf("%d", x);
+✔ Correct: (d) Undefined Behaviour
+💡 Tip: Multiple post-increments in one statement = UB.
+
+Q28. int a=10; int b = printf("%d", a = a--); printf(" %d %d",a,b);
+✔ Correct: (c) Undefined
+💡 Tip: a=a-- = UB (modification & use).
+
+Q29. printf("%d", printf("%d", printf("A")));
+✔ Correct: (c) A21
+💡 Tip: Innermost prints A(1), middle prints 1, outer prints 2.
+
+Q30. int c = printf("%c", 'A'+1); printf(" %d",c);
+✔ Correct: (c) B 1
+💡 Tip: 'A'+1 = 'B', printf prints 1 char → return 1.
+
+✅ Final Score = 21 / 30 (70%)
