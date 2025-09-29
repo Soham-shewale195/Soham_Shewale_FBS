@@ -1,0 +1,31 @@
+//Q.7. Calculating total salary based on basic. If basic <=5000 da, ta and hra will be
+//10%,20% and 25% respectively otherwise da, ta and hra will be 15%,25% and 30%
+//respectively.
+
+#include<stdio.h>
+int main()
+{
+	float Bsalary,Tsalary; // Bsalary=(Base Salary) , Tsalary=(Total Salary)
+	float DA,TA,HRA;
+	printf("Enter your Basic Salary : ");
+	scanf("%f",&Bsalary); // Basic Salary (basic) --> the main fixed salary.
+	
+	if(Bsalary<=5000)
+	{
+		DA= Bsalary*10/100;      //DA (Dearness Allowance) 
+		TA= Bsalary* 20/100;    //TA (Travel Allowance) 
+		HRA=Bsalary*25/100;  //HRA (House Rent Allowance)
+
+		Tsalary= Bsalary+DA+TA+HRA;
+		printf("Total Salary is : %.2f",Tsalary);	
+	}
+	else
+	{
+		DA= Bsalary*15/100;      //DA (Dearness Allowance) 
+		TA= Bsalary* 25/100;    //TA (Travel Allowance) 
+		HRA=Bsalary*30/100;  //HRA (House Rent Allowance)
+		
+		Tsalary= Bsalary+DA+TA+HRA;
+		printf("Total Salary is : %.2f",Tsalary);
+	}
+}
