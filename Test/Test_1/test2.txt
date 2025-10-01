@@ -1,0 +1,474 @@
+Question 1 :
+int a = 1;
+if (printf("") && a++)
+{
+    printf("if block executed");
+}
+else
+{
+    printf("else block executed");
+}
+*
+5 points
+(a) else block executed
+(b) if block executed
+(c) Compilation error
+(d) No output
+Question 2 :
+int a = 1;
+if (printf("hi") && a++)
+{
+    printf("if block executed");
+}
+else
+{
+    printf("else block executed");
+}
+
+*
+5 points
+(a) hiif block executed
+(b) hielse block executed
+(c) if block executed
+(d) else block executed
+Question 3 : 
+int a = 0;
+if (printf("") || a++)
+{
+    printf("if block executed");
+}
+else
+{
+    printf("else block executed");
+}
+
+*
+5 points
+(a) if block executed
+(b) else block executed
+(c) Compilation error
+(d) No output
+Question 4 :
+int a = 0;
+if (printf("FBS") || a++)
+{
+    printf("if block executed");
+}
+else
+{
+    printf("else block executed");
+}
+
+*
+5 points
+(a) FBSif block executed
+(b) FBSelse block executed
+(c) if block executed
+(d) else block executed
+Question 5 :
+int a = 0, b = 5;
+if (a++ && ++b)
+{
+    printf("%d %d", a, b);
+}
+else
+{
+    printf("%d %d", a, b);
+}
+
+*
+5 points
+(a) 1 6
+(b) 1 5
+(c) 0 5
+(d) 1 4
+Question 6 :
+int a = 1, b = 2;
+if (a-- && ++b)
+{
+    printf("%d %d", a, b);
+}
+else
+{
+    printf("%d %d", a, b);
+}
+
+*
+5 points
+(a) 0 2
+(b) 1 3
+(c) 0 3
+(d) 1 2
+Question 7 :
+int x = 0, y = 1;
+if (x++ || --y)
+{
+    printf("%d %d", x, y);
+}
+else
+{
+    printf("%d %d", x, y);
+}
+
+*
+5 points
+(a) 1 0
+(b) 1 1
+(c) 0 0
+(d) 1 2
+Question 8 :
+int p = 5, q = 0;
+if (--p && q++)
+{
+    printf("%d %d", p, q);
+}
+else
+{
+    printf("%d %d", p, q);
+}
+
+*
+5 points
+(a) 5 0
+(b) 4 1
+(c) 4 0
+(d) 5 1
+Question 9 :
+int m = 0, n = 0;
+if (m++ || ++n)
+{
+    printf("%d %d", m, n);
+}
+else
+{
+    printf("%d %d", m, n);
+}
+
+*
+5 points
+(a) 0 0
+(b) 1 1
+(c) 1 0
+(d) 0 1
+Question 10 :
+int i = 1, j = 2;
+if (--i && j--)
+{
+    printf("%d %d", i, j);
+}
+else
+{
+    printf("%d %d", i, j);
+}
+
+*
+5 points
+(a) 0 2
+(b) 1 2
+(c) 0 1
+(d) 1 1
+Question 11 :
+int a = 2, b = 3;
+if (a-- && ++b)
+{
+    printf("%d %d", a, b);
+}
+else
+{
+    printf("%d %d", ++a, b--);
+}
+
+*
+5 points
+(a) 1 4
+(b) 2 4
+(c) 2 3
+(d) 1 3
+Question 12 :
+int x = 0, y = 5;
+if (++x || y--)
+{
+    printf("%d %d", x, y);
+}
+else
+{
+    printf("%d %d", --x, ++y);
+}
+
+
+*
+5 points
+(a) 1 4
+(b) 1 5
+(c) 0 5
+(d) 0 6
+Question 13 :
+int p = 0, q = 0;
+if (p++ && q++)
+{
+    printf("%d %d", p, q);
+}
+else
+{
+    printf("%d %d", ++p, ++q);
+}
+*
+5 points
+(a) 1 1
+(b) 2 1
+(c) 2 2
+(d) 1 2
+Question 14 :
+int i = 5, j = 0;
+if (--i && ++j)
+{
+    printf("%d %d", i--, j++);
+}
+else
+{
+    printf("%d %d", ++i, --j);
+}
+*
+5 points
+(a) 5 0
+(b) 4 0
+(c) 4 1
+(d) 5 1
+Question 15 : 
+int m = 0, n = 1;
+if (m++ || n--)
+{
+    printf("%d %d", m--, --n);
+}
+else
+{
+    printf("%d %d", ++m, ++n);
+}
+*
+5 points
+(a) 1 0
+(b) 1 -1
+(c) 0 0
+(d) 1 1
+Question 16 :
+int a = 1, b = 0;
+if (a && printf("") || b)
+{
+    printf("Yes");
+}
+else
+{
+    printf("No");
+}
+*
+5 points
+(a) Yes
+(b) No
+(c) Compilation error
+(d) No output
+Question 17 :
+int a = 0, b = 1;
+if (a++ || printf("Firstbit"))
+{
+    printf(" Solutions");
+}
+*
+5 points
+(a) Firstbit Solutions
+(b) Firstbit
+(c) Solutions
+(d) No output
+Question 18 :
+int a = 5;
+if (a = 0)
+{
+    printf("Chennai");
+}
+else
+{
+    printf("Mumbai");
+}
+*
+5 points
+(a) Chennai
+(b) Mumbai
+(c) Compilation error
+(d) No output
+Question 19 :
+int a = 5;
+if (a++ && a=0)
+{
+    printf("Chennai %d",a);
+}
+else
+{
+    printf("Mumbai %d",a);
+}
+*
+5 points
+(a) Chennai 0
+(b) Mumbai 0
+(c) Chennai 6
+(d) Mumbai 6
+Question 20 :
+int a = 5;
+if (a++ || a=0)
+{
+    printf("Chennai %d",a);
+}
+else
+{
+    printf("Mumbai %d",a);
+}
+*
+5 points
+(a) Chennai 6
+(b) Mumbai 6
+(c) Chennai 5
+(d) Mumbai 0
+Question 21 :
+int a = 0;
+if (a++ && a=5)
+{
+    printf("Chennai %d",a);
+}
+else
+{
+    printf("Mumbai %d",a);
+}
+*
+5 points
+(a) Chennai 1
+(b) Mumbai 1
+(c) Chennai 5
+(d) Mumbai 5
+Question 22 :
+int a = 3;
+if (a > 1)
+    if (a > 2)
+        if (a > 3)
+            printf("Hi");
+        else
+            printf("Hello");
+*
+5 points
+(a) Hi
+(b) Hello
+(c) No output
+(d) Compilation error
+Question 23 : 
+int x = 2;
+if (x == 1)
+    printf("One");
+else
+    if (x == 2)
+        printf("Two");
+    else
+        printf("Three");
+*
+5 points
+(a) One
+(b) Two
+(c) Three
+(d) None
+Question 24 : 
+int a = 10;
+if (a > 5)
+    if (a < 15)
+        if (a == 10)
+            printf("Perfect");
+        else
+            printf("Almost");
+*
+5 points
+(a) Perfect
+(b) Almost
+(c) Compilation error
+(d) Nothing
+Question 25 : 
+int x = 1;
+if (x == 1)
+    if (x == 2)
+        printf("A");
+    else
+        printf("B");
+A. A
+B. B
+C. Compilation error
+D. No output
+*
+5 points
+(a) A
+(b) B
+(c) Compilation error
+(d) No output
+Question 26 :
+int x = 6;
+if (x % 2 == 0)
+    if (x % 3 == 0)
+        printf("Div by 6");
+    else
+        printf("Even");
+*
+5 points
+(a) Div by 6
+(b) Even
+(c) Nothing
+(d) Compilation error
+Question 27 :
+int x = 5;
+if (x > 0)
+    if (x < 3)
+        printf("Less than 3");
+    else
+        printf("Greater than 3");
+A. 
+B. 
+C. 
+D. 
+*
+5 points
+(a) Less than 3
+(b) Greater than 3
+(c) No output
+(d) Compilation error
+Question 28 :
+int a = 4;
+if (a % 2 == 0)
+    if (a % 3 == 0)
+        printf("Divisible by 6");
+    else
+        printf("Even");
+else
+    printf("Odd");
+*
+5 points
+(a) Even
+(b) Odd
+(c) Divisible by 6
+(d) Compilation error
+Question 29 :
+int a = 3, b = 3;
+if (a == b)
+    if (a + b > 5)
+        printf("Yes");
+    else
+        printf("No");
+*
+5 points
+(a) Yes
+(b) No
+(c) Compilation error
+(d) Nothing
+Question 30 :
+int a = 10;
+if (a++ == 10)
+    printf("%d", a);
+else
+    printf("%d", a);
+*
+5 points
+(a) 10
+(b) 11
+(c) 9
+(d) Undefined
