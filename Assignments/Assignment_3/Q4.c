@@ -4,30 +4,18 @@
 //Output: Prime
 void main()
 {
-	int n= 7,i,a=0;
-	
-	if(n==0 || n==1)
-	{
-		a=0;
-	}
-	else
-	{
-		i=2;
-		while(i<=n/2) // 
+	int n= 7,flag=0;
+	int i=2;
+		while(i<=n/2) //  
 		{
 			if(n%i==0)
 			{
-				a=0;
-				break;
-			}
-			else 
-			{
-				a=1;
+				flag=1;
+				break;  // stops here if condition true.
 			}
 			 i++;
 		}
-	}
-	if(a)
+	if(flag==0)
 	{
 		printf("Prime");
 	}
@@ -35,5 +23,4 @@ void main()
 	{
 		printf("Not Prime");
 	}
-	
 }
