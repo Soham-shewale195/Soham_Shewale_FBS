@@ -7,11 +7,16 @@ void main()
 {
 	int s=1,e=5,sum=0;
 	
-	int i=1;
-	while(i<=5)
+//	int i=1;
+//	while(i<=5)
+//	{
+//		sum= sum+i;
+//		i++;
+//	}
+	int i;
+	for(i=1;i<=5;i++)
 	{
-		sum= sum+i;
-		i++;
+		sum=sum+i;
 	}
 		printf("Sum :%d",sum);
 }

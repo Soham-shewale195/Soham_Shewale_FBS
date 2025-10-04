@@ -5,12 +5,18 @@
 void main()
 {
 	int n=5,table;
-	
-	int i=1;
-	while(i<=10)
+
+//	int i=1;
+//	while(i<=10)
+//	{
+//		table = i*n;
+//		printf("\n%d",table);
+//		i++;
+//	}
+	int i;
+	for (i=1;i<=10;i++)
 	{
 		table = i*n;
 		printf("\n%d",table);
-		i++;
 	}
 }
