@@ -1,0 +1,787 @@
+
+MCQ 3 (Loop)
+Total points
+95/150
+ 
+Email
+*
+shewalesoham195@gmail.com
+Unique FirstBit ID / FirstBit Registration Number (FRN)
+*
+FRN-18J0925/012
+Full Name
+*
+First Name - Middle Name - Last Name
+Soham Mahesh Shewale
+ 
+1)Which loop construct  is best suited when the number of iterations is known? 
+*
+5/5
+for loop
+ 
+while loop
+do-while loop
+switch case
+ 
+2)What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+         int x = 0;
+         while (x++ < 3)
+          printf("%d", x);
+    }
+*
+5/5
+012
+123
+ 
+111
+1234
+ 
+3)What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+        int k = 0;
+        for (k)
+            printf("Hello");
+    }
+*
+0/5
+Compile time error
+hello
+Nothing
+Varies
+ 
+Correct answer
+Compile time error
+ 
+4)What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+        double k = 0;
+        for (k = 0.0; k < 3.0; k++)
+            printf("Hello");
+    }
+*
+5/5
+Run time error
+Hello is printed thrice
+ 
+Hello is printed twice
+Hello is printed infinitely
+ 
+5)What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+        int k = 0;
+        for ( ;k < 3; k++)
+        printf("firstbit");
+    }
+*
+5/5
+Compile time error
+firstbitfirstbitfirstbit
+ 
+Nothing
+firstbitfirstbitfirstbitfirstbit
+ 
+6)Find the output of the given program?
+
+#include<stdio.h>
+void main()
+{
+   int i;
+   for (;;)
+   {
+      printf("Hello fbs");
+      break;
+   }
+   
+}
+*
+0/5
+Hello fbs
+Hello fbs is printed infinite times
+Compiled Successfully, No Output
+ 
+Compile-time error
+Correct answer
+Hello fbs
+ 
+7)Find the output of the given program?
+
+#include<stdio.h>
+int main()
+{
+   int i;
+   for (printf("Hello "); printf("firstbit"); printf("solutions"))
+   {
+      break;
+   }
+   return 0;
+}
+*
+0/5
+Hello
+Hello firstbit
+Hello firstbit solutions
+Compile-time error
+ 
+Correct answer
+Hello firstbit
+ 
+8)What will be the output of the following C code?
+    #include <stdio.h>
+    void main()
+    {
+             while (printf("Hello") - 5)
+             printf(" World");
+    }
+*
+0/5
+nothing will print
+Hello
+Run time error
+Infinite loop
+ 
+Correct answer
+Hello
+ 
+9) What will be the output of this code
+void main(){
+int a = 1;
+while (a <= 3 && printf("X "))
+{
+    printf("Y ");
+    a++;
+}
+}
+*
+5/5
+X Y X Y X Y X
+X X Y
+Infinite loop
+X Y X Y X Y
+ 
+ 
+10) What will be the output of this code
+void main(){
+    int i ;
+    for( i=1; printf("N") ;i++ ){
+    if (i>5){    
+       break;
+     }
+     }
+}
+*
+5/5
+N
+NNNN
+NNNNNN
+ 
+Compile-time error
+ 
+
+11)What is the output of C Program.?
+void main()
+{
+    int k, j;
+   
+    for(k=1, j=10; k <= 5; k++)
+    {
+        printf("%d ", (k+j));
+    }
+
+}
+*
+5/5
+compiler error
+10 10 10 10 10
+11 12 13 14 15
+ 
+None of the above
+ 
+12) What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+         int i = 0;
+         while (i++ < 2)
+         while (i++ < 4)
+         printf("%d ", i);
+    }
+*
+0/5
+2 3
+ 
+1 2 3 4
+2 3 4
+3 4
+Correct answer
+2 3 4
+ 
+13)What will be the output of the following C code?
+#include <stdio.h>
+    void main()
+    {
+         int x = 10;
+        while (x-- >= 8)
+        printf("%d ", x);
+    }
+*
+5/5
+10 9 8
+9 8 7
+ 
+10 9 8 7
+9 8 7 6
+ 
+14)What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+        int i = 0;
+        for (     ;      ;      )
+            printf("In for loop\n");
+            printf("After loop\n");
+    }
+*
+0/5
+Compile time error
+In for loop After loop
+ 
+In for loop infinite times
+Undefined behaviour
+Correct answer
+In for loop infinite times
+ 
+15) What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+      int a = 1;
+     while (printf("FBS%d", a) && a++ < 3)
+    printf(" Java\n");
+    }
+*
+0/5
+FBS1 Java FBS2 Java FBS3 Java
+FBS1 Java FBS2 Java FBS3
+Compile time error
+ 
+FBS1 Java FBS3
+Correct answer
+FBS1 Java FBS2 Java FBS3
+ 
+16)What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+        while (printf("Firstbit Solutions\n"))
+         break;
+    }
+*
+5/5
+Firstbit Solutions
+ 
+Firstbit Solutions (infinite times)
+Compilation Error
+No output
+ 
+17)What is the purpose of the continue statement in a loop?
+*
+5/5
+To exit the loop immediately
+To skip the current iteration and move to the next iteration
+ 
+To terminate the program
+To execute a specific block of code
+ 
+18)Which statement is used to exit a loop prematurely? 
+*
+5/5
+return statement
+continue statement
+break statement
+ 
+exit statement
+ 
+19)What is the output of the following code snippet?
+void main(){
+int x = 0;
+while (++x && x < 3)
+    printf("x=%d\n", x);
+}
+*
+5/5
+x=1 x=2
+ 
+x=0 x=1 x=2
+x=1 x=2 x=3
+x=0
+ 
+20)What is the output of the following program?
+void main(){
+    int i = 0;
+    for(i = 0; i < 10; i++){
+    continue;
+    }
+    printf("%d",i);
+}
+*
+0/5
+10
+0
+ 
+Compilation Error
+9
+Correct answer
+10
+ 
+21)What is the output of the following program?
+void main(){
+    int i;
+    for( i= 0; i < 10; i++){
+       if(i % 2 == 0){
+        continue;
+       }
+        printf("%d",i);
+    }
+}
+*
+5/5
+Program will print all even numbers between 0 to 10
+The program will print all odd numbers between 0 to 10
+ 
+Program gives a compilation error
+None of the above
+ 
+22) Find the output of the given program?
+
+#include<stdio.h>
+void main()
+{
+    int i = 3;
+while (i-- && printf("A "))
+    printf("B ");
+
+}
+*
+5/5
+A B A B A B
+ 
+A A B B
+A B A
+A A B B A A B B
+ 
+23)   What is the output of the given below program?  #include<stdio.h>
+void main()
+{
+  int i = 0;
+while (i < 5) {
+    i++;
+    if (i == 3)
+        continue;
+    printf("%d ", i);
+}
+}
+*
+5/5
+1 2 3 4 5
+1 2 4 5
+ 
+1 2 3 5
+0 1 2 4 5
+ 
+24) What is the output of the given below program?
+
+#include<stdio.h>
+int main()
+{
+int i = 10;
+while (i--) {
+    if (i == 5)
+        break;
+    if (i % 2 == 0)
+        continue;
+    printf("%d ", i);
+}
+}
+*
+5/5
+9 7 5
+9 7
+ 
+9 8 7 6
+9 7 6
+ 
+25) What is the output?
+#include<stdio.h>
+int main()
+{
+   int n;
+   for (n = 9; n!=0; n--)
+     printf("%d", n--);
+   return 0;
+}
+*
+0/5
+9 7 5 3 1
+ 
+9 8 7 6 5 4 3 2 1
+Infinite Loop
+9 7 5 3
+Correct answer
+Infinite Loop
+ 
+26)#include <stdio.h>  
+int main()
+{
+  int i;  
+  for (i = 1; i != 10; i += 2)
+    printf(" Firstbit ");
+  return 0;
+}
+*
+0/5
+Firstbit Firstbit Firstbit Firstbit Firstbit
+ 
+Firstbit infinite times
+Firstbit Firstbit Firstbit Firstbit
+Firstbit Firstbit Firstbit Firstbit Firstbit Firstbit`
+Correct answer
+Firstbit infinite times
+ 
+27)What’s going to happen when we compile and run the following C program?
+#include <stdio.h>
+int main()
+{
+ int j = 0;
+ for ( ; j < 10 ; )
+ {
+   if (j < 10)
+     printf("Firstbit", j++);
+   else
+     continue;
+       printf(" Solutions\n");
+ }
+ return 0;
+}
+*
+5/5
+Compile Error due to use of continue in for loop
+No compile error but it will run into infinite loop printing Solutions.
+compile error
+it’ll print Firstbit Solutions 10 times.
+ 
+ 
+28)What will be the output of the following C code?
+#include <stdio.h>
+void main()
+{
+int a = 0;
+while (a < 5) {
+    if (++a == 3)
+        break;
+    printf("%d ", a);
+}
+}
+*
+5/5
+1 2
+ 
+1 2 3
+0 1 2
+Compilation error
+ 
+29) What is the output of the following C code?
+#include
+void main()
+{
+for (printf("CSK\n"); 0; printf("KKR\n"))
+    printf("MI\n");
+}
+*
+5/5
+CSK MI
+CSK KKR MI
+ 
+CSK
+Compilation error
+ 
+30)What is the output of the following C code?
+
+#include <stdio.h>
+void main()
+{
+int a = 4;
+int sum = 0;
+int i;
+for(i = 1; i < a; i++) {
+    sum = sum + a;
+}
+printf("The value of sum and a are %d and %d respectively", a, sum);
+}
+*
+0/5
+The value of sum and a are 10 and 4 respectively
+The value of sum and a are 12 and 4 respectively
+ 
+The value of sum and a are 4 and 12 respectively
+The value of sum and a are 4 and 10 respectively
+Correct answers
+The value of sum and a are 10 and 4 respectively
+The value of sum and a are 4 and 12 respectively
+This content is neither created nor endorsed by Google. - Contact form owner - Terms of Service - Privacy Policy
+Does this form look suspicious? Report
+
+Google Forms
+
+<----------------------------------------queries of wrong answers : --------------------------------------------->
+Question 3
+void main() { int k = 0; for (k) printf("Hello"); }
+
+Your Answer: Nothing
+
+Correct Answer: Compile time error
+
+Validation & Explanation:
+This is a syntax error. The structure of a for loop requires three components separated by two semicolons, even if they are empty: for (initialization; condition; increment).
+
+Your code has for (k), which is treated as just an initialization statement. It's missing the two required semicolons (;) to define the condition and increment parts. Since the syntax is incorrect, the program will fail to compile. Your answer, "Nothing", would be correct if the code compiled but the loop condition was false from the start (e.g., for (k=0; k<0; k++)).
+
+Question 6
+void main() { int i; for (;;) { printf("Hello fbs"); break; } }
+
+Your Answer: Compiled Successfully, No Output
+
+Correct Answer: Hello fbs
+
+Validation & Explanation:
+The for (;;) construct is a valid way to create an infinite loop. The program enters this loop, and the first thing it does is execute printf("Hello fbs");. This prints "Hello fbs" to the screen.
+
+The very next statement is break;. The break statement immediately terminates the innermost loop it is in. So, after printing the message once, the break is executed, and the program exits the loop. Therefore, the output is printed exactly one time.
+
+Question 7
+int main() { int i; for (printf("Hello "); printf("firstbit"); printf("solutions")) { break; } return 0; }
+
+Your Answer: Hello firstbit solutions
+
+Correct Answer: Hello firstbit
+
+Validation & Explanation:
+This question tests the order of execution in a for loop:
+
+Initialization: The printf("Hello "); part runs once at the very beginning. The output is now Hello .
+
+Condition: The printf("firstbit"); part is evaluated. It prints firstbit and returns the number of characters printed (8). Since 8 is not zero, the condition is true. The output is now Hello firstbit.
+
+Loop Body: The code inside the {} runs. It's just break;, so the loop terminates immediately.
+
+Increment: The printf("solutions") part is never executed. The increment step only runs after a full iteration of the loop body. Since we used break, the iteration never completed.
+
+Question 8
+void main() { while (printf("Hello") - 5) printf(" World"); }
+
+Your Answer: Infinite loop
+
+Correct Answer: Hello
+
+Validation & Explanation:
+This is another tricky one involving printf's return value.
+
+The condition of the while loop, printf("Hello") - 5, is evaluated first.
+
+The function printf("Hello") executes. It prints "Hello" to the screen and returns the number of characters it printed, which is 5.
+
+The expression now becomes 5 - 5, which evaluates to 0.
+
+In C, 0 is treated as false.
+
+Since the loop condition is false, the body of the loop (printf(" World");) is never executed.
+
+The only thing that ran was the printf in the condition check.
+
+Question 12
+void main() { int i = 0; while (i++ < 2) while (i++ < 4) printf("%d ", i); }
+
+Your Answer: 2 3
+
+Correct Answer: 2 3 4
+
+Validation & Explanation:
+Let's trace the value of i:
+
+i starts at 0.
+
+Outer loop check: i++ < 2 (is 0 < 2?). Yes, it's true. i is now 1.
+
+Enter the inner loop.
+
+Inner check 1: i++ < 4 (is 1 < 4?). Yes, true. i is now 2. The loop body runs: printf("%d ", i); prints 2.
+
+Inner check 2: i++ < 4 (is 2 < 4?). Yes, true. i is now 3. The loop body runs: printf("%d ", i); prints 3.
+
+Inner check 3: i++ < 4 (is 3 < 4?). Yes, true. i is now 4. The loop body runs: printf("%d ", i); prints 4.
+
+Inner check 4: i++ < 4 (is 4 < 4?). No, false. The inner loop terminates.
+
+The program returns to the outer loop check.
+
+Outer loop check: i++ < 2 (is 4 < 2?). No, false. The outer loop terminates.
+
+The final output is 2 3 4.
+
+Question 14
+void main() { for ( ; ; ) printf("In for loop\n"); printf("After loop\n"); }
+
+Your Answer: In for loop After loop
+
+Correct Answer: In for loop infinite times
+
+Validation & Explanation:
+In C, if a loop is not followed by curly braces {}, it only controls the single statement immediately following it.
+
+The for ( ; ; ) is an infinite loop.
+
+The single statement it controls is printf("In for loop\n");.
+
+Therefore, this printf will be executed infinitely.
+
+The second statement, printf("After loop\n");, is considered to be after the loop. Because the loop is infinite, this line of code is unreachable and will never be executed.
+
+Question 15
+void main() { int a = 1; while (printf("FBS%d", a) && a++ < 3) printf(" Java\n"); }
+
+Your Answer: Compile time error
+
+Correct Answer: FBS1 Java FBS2 Java FBS3
+
+Validation & Explanation:
+Let's trace this carefully, paying attention to the && operator and post-increment a++.
+
+Loop 1:
+
+printf("FBS%d", a) runs first. It prints FBS1. It returns a non-zero value (true).
+
+Because the left side of && is true, the right side is checked: a++ < 3. The current value of a (1) is used, so 1 < 3 is true. Then a is incremented to 2.
+
+Since both sides are true, the whole condition is true. The loop body printf(" Java\n"); runs, printing Java\n.
+
+Loop 2:
+
+printf("FBS%d", a) runs. a is now 2. It prints FBS2. It returns a non-zero value (true).
+
+The right side is checked: a++ < 3. The current value of a (2) is used, so 2 < 3 is true. Then a is incremented to 3.
+
+Since both sides are true, the loop body runs, printing Java\n.
+
+Loop 3:
+
+printf("FBS%d", a) runs. a is now 3. It prints FBS3. It returns a non-zero value (true).
+
+The right side is checked: a++ < 3. The current value of a (3) is used, so 3 < 3 is false. a is still incremented to 4.
+
+Since the right side is false, the whole condition is false. The loop terminates.
+
+The final combined output is: FBS1 Java (with a newline), FBS2 Java (with a newline), and FBS3.
+
+Question 20
+void main() { int i = 0; for(i = 0; i < 10; i++){ continue; } printf("%d",i); }
+
+Your Answer: 0
+
+Correct Answer: 10
+
+Validation & Explanation:
+The continue statement skips the rest of the current loop iteration and proceeds to the next iteration's increment and condition check.
+
+The loop initializes i to 0.
+
+It runs for i = 0, 1, 2, ..., 9.
+
+In every single iteration, the continue statement is hit immediately. This means nothing inside the loop body happens, but the loop mechanism itself continues. The i++ part runs at the end of each iteration.
+
+After the iteration where i is 9, i is incremented to 10.
+
+The loop condition i < 10 is checked. 10 < 10 is false, so the loop terminates.
+
+The printf("%d", i); statement runs after the loop has finished. At this point, the value of i is 10.
+
+Question 25
+int main() { int n; for (n = 9; n!=0; n--) printf("%d", n--); return 0; }
+
+Your Answer: 9 7 5 3 1
+
+Correct Answer: Infinite Loop
+
+Validation & Explanation:
+The variable n is being decremented twice in each loop cycle.
+
+Inside the printf: printf("%d", n--) prints the current value of n, then decrements it.
+
+In the for loop's update step: n-- decrements n again.
+
+Let's trace n:
+
+Starts at 9. Condition 9!=0 is true. printf prints 9, n becomes 8. Loop update runs, n becomes 7.
+
+Next iteration, n is 7. Condition 7!=0 is true. printf prints 7, n becomes 6. Loop update runs, n becomes 5.
+
+The sequence of n at the start of each loop is: 9, 7, 5, 3, 1, -1, -3, ...
+As you can see, n will never be exactly 0. The condition n!=0 will always be true, leading to an infinite loop.
+
+Question 26
+int main() { int i; for (i = 1; i != 10; i += 2) printf(" Firstbit "); return 0; }
+
+Your Answer: Firstbit Firstbit Firstbit Firstbit Firstbit
+
+Correct Answer: Firstbit infinite times
+
+Validation & Explanation:
+This is similar to the previous question. Let's trace the value of i:
+
+It starts at 1.
+
+It increments by 2 each time: 1, 3, 5, 7, 9, 11, 13, ...
+The loop's condition is i != 10. Since i is always an odd number, it will never be equal to 10. The condition will never be false, and the loop will run forever.
+
+Question 30
+void main() { int a = 4; int sum = 0; int i; for(i = 1; i < a; i++) { sum = sum + a; } printf("The value of sum and a are %d and %d respectively", a, sum); }
+
+Your Answer: The value of sum and a are 12 and 4 respectively
+
+Correct Answer(s) given by form: "The value of sum and a are 10 and 4 respectively" AND "The value of sum and a are 4 and 12 respectively"
+
+Validation & Explanation:
+Let's trace this simple loop.
+
+a is 4, sum is 0.
+
+The loop runs for i = 1, i = 2, and i = 3 (since i < 4). It runs 3 times.
+
+i = 1: sum = 0 + 4 = 4
+
+i = 2: sum = 4 + 4 = 8
+
+i = 3: sum = 8 + 4 = 12
+
+The loop finishes. The printf statement is executed.
+
+It prints the value of a first, which is 4, and then the value of sum, which is 12.
+
+The correct output string would be: "The value of sum and a are 4 and 12 respectively"
+
+Conclusion on this question: Your selected answer ("12 and 4") has the right numbers but in the wrong order based on the printf statement. However, the form shows two correct answers, one of which ("10 and 4") is definitively wrong, and the other ("4 and 12") is the truly correct one. This seems to be an error in the quiz itself. Your understanding of the calculation (sum becomes 12) was correct, you just mixed up the order in the printf.
