@@ -5,15 +5,27 @@
 //Equilateral: All three sides equal 
 //Isosceles: Any two sides equal (but not all three equal, else it’s equilateral).
 //Scalene: All sides different 
-void triangle();
+int triangle();
 void main()
 {
-	triangle();
+	int t=triangle();
+		if(t==0)
+		{
+			printf("Its a Equilateral triangle .");
+		}
+		else if(t==1)
+		{
+			printf("Its a Isosceles triangle .");
+		}
+		else
+		{
+			printf("Its a Scelene triangle .");
+		}
 }
-void triangle()
+int triangle()
 {
 		float a,b,c;
-	
+	int count=0;
 	printf("Enter sides of trinagle :");
 	scanf("%f%f%f",&a,&b,&c);
 	
@@ -21,15 +33,18 @@ void triangle()
 	{
 		if(a==b && b==c)
 		{
-			printf("Its a Equilateral triangle .");
+			count=0;
+			return count;
 		}
 		else if(a==b || b==c || a==c)
 		{
-				printf("Its a Isosceles triangle .");
+			count++;
+			return count;
 		}
 		else
 		{
-			printf("Its a Scelene triangle .");
+			count=2;
+			return count;
 		}
 	}
 	else 

@@ -1,5 +1,7 @@
 #include<stdio.h>
 //Q.1 print 1 to 10 numbers.
+
+// this code cannt be done cause funnction returns only one value.
 void oneto10();
 void main()
 {

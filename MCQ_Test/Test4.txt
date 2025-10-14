@@ -1,0 +1,559 @@
+Q1.
+void main() {
+    somefun();
+}
+void somefun() {
+    fun1();
+    fun2();
+}
+void fun1() {
+    printf("hello");
+}
+void fun2() {
+    printf("bye");
+}
+
+
+*
+5 points
+A) byehello
+B) hellobye
+C) hello bye
+D) Error
+Q2.
+void main() {
+    fun1();
+    fun2();
+}
+void fun1() {
+    printf("hello ");
+    fun2();
+}
+void fun2() {
+    fun1();
+    printf("bye ");
+}
+
+
+*
+5 points
+A) hellohellohello......infinite times
+B) hello bye
+C) Compilation error
+D) hello hello bye
+Option 5
+Q3.
+void main() {
+    int a = 0, b = 10;
+    fun1(a++);
+    while (b > 5)
+        fun2(b--);
+}
+void fun1(int a) {
+    while (a > 0) {
+        printf("%d", a);
+        a--;
+    }
+    printf("outside while");
+}
+void fun2(int b) {
+    printf("%d ", b);
+}
+
+
+*
+5 points
+A) 109876outside while
+B) outside while109876
+C) outside while10 9 8 7 6
+D) outside while
+Q4.
+void main() {
+    int x = 0;
+    check(x);
+}
+void check(int x) {
+    while (x++ < 3) {
+        if (x == 2)
+            continue;
+        printf("%d ", x);
+    }
+}
+
+*
+5 points
+A) 1 2 3
+B) 1 3
+C) 1 2
+D) 2 3
+Option 5
+Q5.
+void main() {
+    one();
+    two();
+}
+void one() {
+    int i = 0;
+    while (i < 2) {
+        printf("A ");
+        i++;
+    }
+}
+void two() {
+    int i = 2;
+    while (i--) {
+        printf("B ");
+    }
+}
+
+*
+5 points
+A) A A B B
+B) B B A A
+C) A B A B
+D) Compilation Error
+Q6.
+void main() {
+    fun1();
+    printf("End ");
+}
+void fun1() {
+    for (int i = 0; i < 3; i++) {
+        if (i == 1)
+            continue;
+        fun2(i);
+    }
+}
+void fun2(int x) {
+    printf("%d ", x);
+}
+
+
+*
+5 points
+A) 0 1 2 End
+B) 0 2 End
+C) 0 1 2
+D) End 0 2
+Q7.
+void main() {
+    display(3);
+}
+void display(int n) {
+    for (int i = 0; i < n; i++) {
+        if (i == 2)
+            break;
+        print(i);
+    }
+}
+void print(int x) {
+    printf("%d ", x);
+}
+
+*
+5 points
+A) 0 1 2
+B) 0 1
+C) 1 2
+D) 0 2
+Option 5
+Q8.
+void main() {
+    func1();
+}
+void func1() {
+    printf("1 ");
+    func2();
+}
+void func2() {
+    printf("2 ");
+    return;
+    func1();
+}
+
+
+*
+5 points
+A) 1 2 1 2
+B) 1 2
+C) 2 1 2
+D) 1 2 1 2 1 2...
+Q9.
+void main() {
+    int x = 0, y = 5;
+    fun1(x++);
+    while (y > 2)
+        fun2(y--);
+}
+void fun1(int x) {
+    while (x < 3) {
+        printf("%d", x);
+        x++;
+    }
+    printf("done");
+}
+void fun2(int y) {
+    printf("%d ", y);
+}
+
+
+*
+5 points
+A) 012done 5 4 3
+B) done 012 5 4 3
+C) 012done 5 4
+D) 012done 5 4 3 done
+Q10.
+void main() {
+    int a = 3, b = 10;
+    fun1(a--);
+    while (b > 6)
+        fun2(b--);
+}
+void fun1(int a) {
+    while (a > 0) {
+        printf("%d", a);
+        a--;
+    }
+    printf("done");
+}
+void fun2(int b) {
+    printf("%d ", b);
+}
+
+
+*
+5 points
+A) 321done10 9 8 7
+B) done32110 9 8 7
+C) 321done10 9 8
+D) 321done10 9 8 7 done
+Q11
+void main() {
+    int x = 1, y = 4;
+    fun1(x++);
+    while (y > 1)
+        fun2(--y);
+}
+void fun1(int x) {
+    printf("%d ", x);
+}
+void fun2(int y) {
+    printf("%d ", y);
+}
+
+
+*
+5 points
+A) 1 3 2 1
+B) 1 4 3 2 1
+C) 2 3 2 1
+D) 2 3
+Q12.
+void main() {
+    int a = 0, b = 3;
+    funA(a++);
+    for (; b--; )
+        funB(b);
+}
+void funA(int a) {
+    printf("%d ", a);
+}
+void funB(int b) {
+    if (b == 1) return;
+    printf("%d ", b);
+}
+
+*
+5 points
+A) 0 2 1 0
+B) 0 2 0
+C) 0 2 1
+D) 0 3 2 0
+Q13.
+#include <stdio.h>
+
+void swap(int x, int y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+void main() {
+    int a = 5, b = 10;
+    swap(a, b);
+    printf("%d %d", a, b);
+   
+}
+
+
+*
+5 points
+A. Print Swapped the values of "a" and "b."
+B. Prints 5 10.
+C. Causes a compilation error.
+D. Swaps the addresses of "a" and "b."
+Q14.
+which of following is correct way to invoke a function ?
+*
+5 points
+A) function name(parameter if any? values or variables with datatype);
+B) return _type function name(parameter if any? values or variables with datatype);
+C) function name(parameter if any? only variables with datatype);
+D) function name(parameter if any? values or variables without datatype);
+Q15.
+which is true about functions?
+*
+5 points
+A) we can define a function inside a function
+B) if we are returning nothing then there is no need to give any return type in function definition
+C) we can call multiple functions inside a function definition
+D) function which is called first gets out of stack frame first
+Q16.
+void main() {
+    if (fun1() || fun2()) {
+        printf("if block executed");
+    } else
+        printf("else block executed");
+}
+int fun1() {
+    return 0;
+}
+int fun2() {
+    printf("we are in fun2");
+    return 0;
+}
+
+*
+5 points
+A) if block executed
+B) else block executed
+C) Prints “we are in fun2” then if block
+D) Prints “we are in fun2” then else block
+Q17.
+void main() {
+    int a = fun1();
+    printf("%d", a);
+    printf("\n%c", a);
+}
+int fun1() {
+    return 'a';
+}
+
+*
+5 points
+A) 97 a
+B) a 97
+C) Compilation error
+D) Garbage
+Q18.
+int compute() {
+    int x = 2, y = 3;
+    return x, y;
+}
+void main() {
+    printf("%d", compute());
+}
+
+
+*
+5 points
+A) 2
+B) 3
+C) Compilation Error
+D) Garbage
+Q19.
+
+int f1() {
+    printf("f1");    
+    return 0; }
+int f2() {
+    printf("f2");
+    return 1; }
+void main() {
+    if (f1() && f2())
+        printf(" Both");
+}
+
+*
+5 points
+A) f1f2 Both
+B) f1 Both
+C) f1f2
+D) f1
+Q20.
+
+char getChar() {
+    return 65;
+}
+void main() {
+    int x = getChar();
+    printf("%c %d", x, x);
+}
+
+*
+5 points
+A) A 65
+B) 65 A
+C) Compilation Error
+D) Garbage
+Q21.
+void main() {
+    if (f1() || f2())
+        printf("Yes");
+    else
+        printf("No");
+}
+int f1() {
+    printf("f1 ");
+    return 1;
+}
+int f2() {
+    printf("f2 ");
+    return 1;
+}
+
+
+*
+5 points
+A) f1 f2 Yes
+B) f1 Yes
+C) f2 Yes
+D) Yes
+Q22.
+void main() {
+    int x = 3;
+    while (x--) {
+        if (x == 1)
+            break;
+        printf("%d ", x);
+    }
+}
+
+*
+5 points
+A) 2 1 0
+B) 2
+C) 2 1
+D) 2 0
+Q23.
+void main() {
+    int a = 2, b = 4;
+    calc(a, b);
+}
+void calc(int x, int y) {
+    printf("%d ", x + y);
+    return;
+    printf("Skipped");
+}
+
+*
+5 points
+A) 6
+B) 6 Skipped
+C) Compilation Error
+D) Skipped
+Q24.
+void main() {
+    if (fun())
+        printf("Hello");
+    else
+        printf("Bye");
+}
+int fun() {
+    return 5 > 10;
+}
+
+*
+5 points
+A) Hello
+B) Bye
+C) Compilation error
+D) Nothing
+Q25.
+void main() {
+    int x = 5;
+    func(x--);
+    printf("%d", x);
+}
+void func(int x) {
+    printf("%d ", x);
+}
+
+*
+5 points
+A) 5 4
+B) 4 5
+C) 5 5
+D) Compilation Error
+Q26.
+void main() {
+    if (f1() && f2())
+        printf("Hello");
+}
+int f1() {
+    printf("f1 ");
+    return 0;
+}
+int f2() {
+    printf("f2 ");
+    return 1;
+}
+
+*
+5 points
+A) f1 f2 Hello
+B) f1 Hello
+C) f1
+D) f1 f2
+Q27.
+void main() {
+    fun1();
+}
+void fun1() {
+    printf("Start ");
+    fun2();
+    printf("End ");
+}
+void fun2() {
+    printf("Middle ");
+}
+
+*
+5 points
+A) Start Middle End
+B) Start End Middle
+C) Middle Start End
+D) Compilation Error
+Answer: A
+Q28.
+void main() {
+    int result = sum(2, 3);
+    printf("%d", result);
+}
+int sum(int a, int b) {
+    return a + b;
+}
+
+*
+5 points
+A) 5
+B) 2 3
+C) Compilation Error
+D) Garbage
+Q29.
+void main() {
+    int a = 5;
+    printf("%d", test(a));
+}
+int test(int a) {
+    a = a * 2;
+    return a;
+}
+
+*
+5 points
+A) 5
+B) 10
+C) Compilation Error
+D) Garbage

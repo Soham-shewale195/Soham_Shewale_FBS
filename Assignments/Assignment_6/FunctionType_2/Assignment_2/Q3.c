@@ -1,25 +1,42 @@
 #include<stdio.h>
 //Q.3. Write a program to find greatest of three numbers using nested if-else.
-void great();
+int great();
 void main()
 {
-	great();
+	int g=great();
+	if(g==0)
+	{
+		printf("A is greater ");
+	}
+	else if(g==1)
+	{
+		printf("B is greater ");
+	}
+	else if(g==2)
+	{
+		printf("C is greater ");
+	}
 }
-void great()
+int great()
 {
-		int a=20,b=40,c=30;
+	int a,b,c,count=0;
+	printf("Enter values of A ,B and C repectively :");
+	scanf("%d%d%d",&a,&b,&c);
 	
 	if(a>b && a>c)
 	{
-		printf("A is greater  :%d",a);
+		count=0;
+		return count;
 	}
 	else if(b>a && b>c)
 	{
-		printf("A is greater  :%d",b);
+		count++;
+		return count;
 	}
 	else if(c>a && c>b)
 	{
-		printf("A is greater  :%d",c);
+		count=2;
+		return count;
 	}
 //	else if(a==b && b==c )
 //	{

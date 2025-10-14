@@ -30,12 +30,20 @@
 //Q.4 Check the given number is prime or not. 
 //Input: n = 7 
 //Output: Prime
-void isPrime();
+int isPrime();  // func declaration
 void main()
 {
-	isPrime();
+	int flag=isPrime();    // func call.
+	if(flag==0)
+	{
+		printf("Prime");
+	}
+	else
+	{
+		printf("Not Prime");
+	}
 }
-void isPrime()
+int isPrime()   // func defination
 {
 	
 	int n,flag=0;
@@ -50,12 +58,6 @@ void isPrime()
 			break;
 		}
 	}
-	if(flag==0)
-	{
-		printf("Prime");
-	}
-	else
-	{
-		printf("Not Prime");
-	}
+	return flag;
+	
 }

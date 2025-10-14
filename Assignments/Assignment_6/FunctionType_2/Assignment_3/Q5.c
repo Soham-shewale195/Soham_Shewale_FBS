@@ -5,15 +5,24 @@
 //An Armstrong number is a number equal to the sum of its digits raised to the power of the number of digits.
 
 //code is only works for 3 digit num.
-void arm();
+int arm();
 void main()
 {
-	arm();
+	int flag=arm();
+	if(flag==0)
+	{
+		printf("Armstong ");
+	}
+	else
+	{
+		printf("Not Armstong ");
+	}
 }
-void arm()
+int arm()
 {
-		int n=153,arm,temp,count=0,d1,d2,d3;
-	
+		int n,arm,temp,count=0,d1,d2,d3;
+	printf("Enter a num to find armstrong num :");
+	scanf("%d",n);
 	temp=n; 
 	
 	d1=n/100; // 1
@@ -31,14 +40,16 @@ void arm()
 //	printf("%d %d %d",d1,d2,d3);
 //	printf("%d",count);
 	arm=d1*d1*d1+d2*d2*d2+d3*d3*d3;
-	
+	int flag=0;
 	if(n==arm)
 	{
-		printf("Armstong : %d",arm);
+		flag=0;
+		return flag;
 	}
 	else
 	{
-		printf("Not Armstong ");
+		flag++;
+		return flag;
 	}
 }
 //<------------------------------ Using for loop----------------------------->

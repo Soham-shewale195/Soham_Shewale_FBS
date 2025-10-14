@@ -1,14 +1,15 @@
 #include<stdio.h>
 //Q.1) Accept two numbers from user and an operator (+,-,/,*,%) based on that perform the 
 //desired operations. 
-void ope();
+int ope();
 void main()
 {
-ope();
+	int o=ope();
+	printf("\nAnswer is :%d",o);
 }
-void ope()
+int ope()
 {
-		int a,b,ans;
+	int a,b,ans;
 	char ope;
 	
 	printf("Enter two numbers :");
@@ -20,27 +21,27 @@ void ope()
 	if(ope == '+')
 	{
 		ans=a+b;
-		printf("\nAnswer is :%d",ans);
+		return ans;
 	}
 	else if(ope == '-')
 	{
 		ans=a-b;
-		printf("\nAnswer is :%d",ans);
+		return ans;
 	}
 	else if(ope == '/')
 	{
 		ans=a/b;
-		printf("\nAnswer is :%d",ans);
+		return ans;
 	}
 	else if(ope == '*')
 	{
 		ans=a*b;
-		printf("\nAnswer is :%d",ans);
+		return ans;
 	}
 	else if(ope == '%')
 	{
 		ans=a%b;
-		printf("\nAnswer is :%d",ans);
+		return ans;
 	}
 	else
 	{
