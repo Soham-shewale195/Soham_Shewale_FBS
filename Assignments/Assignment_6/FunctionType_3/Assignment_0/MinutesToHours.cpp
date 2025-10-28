@@ -1,24 +1,25 @@
 #include<stdio.h>
 //7. Write a C program to convert given minutes into hours and remaining minutes.
-
-int time();
+// solving using functiontype 3(with para and w/o return type).
+void time(int);
 int main()
 {
-	int t= time();
-	printf("hour = %d ",t);
-}
-int time()
-{
-		int min,hour,rem;
-	
+	int min;
 	printf("Enter the Minutes: ");
 	scanf("%d",&min);
 	
+	time(min);
+}
+void time(int min)
+{
+	int hour,rem;
+		
 	hour=min/60;
 	rem=min%60;
 	
-	return hour;  // function return only one value . 
-
+	printf("%d minutes :hour = %d and  minutes = %d",min,hour,rem);
+	
+	
 }
 
 

@@ -2,20 +2,17 @@
 //Write a C program to convert temperature from Celsius to Fahrenheit using the
 //formula:
 //F = (C *9/5) + 32
-float farenhit();
+
+void farenhit(int); // func declaration
 int main()
 {
-	float f= farenhit();
-	printf("Farenhit =%f",f); //use float (or double) and write 9.0/5 instead of 9/5.
-
+	int cels=37;
+	 farenhit(cels);   // func call.
 }
-float farenhit()
+void farenhit(int temp)  // func defination
 {
-	int cels;
-	printf("Enter the temp in celcious :");
-	scanf("%d",&cels); 
-	float farenhit;
+	float faren;
+	faren=(temp*9.0/5)+32;  //9/5 in C (with integers) = 1 (because integer division truncates the decimal).
+	printf("Farenhit =%f",faren); //use float (or double) and write 9.0/5 instead of 9/5.
 	
-	farenhit=(cels*9.0/5)+32;  //9/5 in C (with integers) = 1 (because integer division truncates the decimal).
-	return farenhit;
 }

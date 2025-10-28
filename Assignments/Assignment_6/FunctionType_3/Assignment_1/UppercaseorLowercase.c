@@ -10,34 +10,24 @@
 //0–9:
 //'0' = 48, '1' = 49, … '9' = 57
 
-int alpha();
-void main()
+void alpha(char);
+int main()
 {
-	int a=alpha();
-	if(a==0) //A = 65, B = 66, … Z = 90
+	char character;
+	printf("Enter a character :");
+	scanf("%c",&character);
+	alpha(character);
+}
+void alpha(char character)
+{
+	
+	if(character>= 'A' && character<='Z') //A = 65, B = 66, … Z = 90
 	{
 		printf("Uppercase .");
 	}
 	else
 	{
 		printf("Lowercase .");
-	}
-}
-int alpha()
-{
-	char character,count=0;
-	printf("Enter a character :");
-	scanf("%c",&character);
-	
-	if(character>= 'A' && character<='Z') //A = 65, B = 66, … Z = 90
-	{
-		count=0;
-		return count;
-	}
-	else
-	{
-		count++;
-		return count;
 	}
 }
 
