@@ -1,0 +1,331 @@
+1. What is the output of the following code snippet?
+
+int var = 10;
+int *ptr = &var;
+printf("%d", *ptr);
+*
+5 points
+10
+Address of var
+Garbage value
+Compilation error
+2. Which of the following is an invalid pointer operation?
+*
+5 points
+Incrementing a pointer
+Decrementing a pointer
+Comparing two pointers
+All of the above are valid operations
+3. What is the output of the following code snippet?
+
+int x = 5;
+int *ptr = &x;
+*ptr = 10;
+printf("%d", x);
+*
+5 points
+5
+10
+Address of x
+Compilation error
+4. What is the primary purpose of the 'sizeof()' operator in C?
+*
+5 points
+To find the size of a variable in bytes
+To find the address of a variable
+To allocate memory dynamically
+To initialize pointers
+5. What is the output of the following code snippet?
+
+int a = 20;
+int *ptr = &a;
+printf("%d", *ptr);
+*
+5 points
+20
+Address of a
+Garbage value
+Compilation error
+6. What happens with the following code snippet?
+
+int a = 20;
+int *ptr;
+ptr = &a;
+printf("%d", *ptr);
+30 = *ptr;
+printf("%d", a);
+*
+5 points
+Prints 20 20
+Prints 20 30
+Prints 30 30
+Compilation error
+7. What is (void*)?
+*
+5 points
+A pointer that can point to any data type
+A pointer that points to nothing
+An invalid pointer type
+A pointer that causes compilation error
+8. What is the output of the following code snippet?
+
+int a = 5;
+int *p = &a;
+int *q = p;
+*q = 10;
+printf("%d %d", a, *p);
+*
+5 points
+5 5
+10 10
+5 10
+10 5
+9. What happens with the following code?
+
+int *ptr;
+printf("%d", *ptr);
+*
+5 points
+Prints 0
+Prints garbage value
+Runtime error/Undefined behavior
+Compilation error
+10. What is the output of the following code snippet?
+
+int a = 10;
+int *p = &a;
+printf("%d", (*p)++);
+*
+5 points
+10
+11
+Address of a
+Compilation error
+11. What is the difference between these two statements?
+
+int *p, q;  // Statement 1
+int *p, *q; // Statement 2
+*
+5 points
+Both declare two integer pointers
+Statement 1 declares one pointer and one integer, Statement 2 declares two pointers
+Both are equivalent
+Statement 1 causes compilation error
+12. What is the output of the following code snippet?
+
+int x = 15;
+int *ptr = &x;
+*ptr = *ptr + 5;
+printf("%d", x);
+*
+5 points
+15
+20
+25
+Compilation error
+13. What is the output of the following code snippet?
+
+int a = 7;
+int *p = &a;
+printf("%d", ++(*p));
+*
+5 points
+7
+8
+Address of a
+Compilation error
+14. What happens in the following code?
+
+int x = 10;
+int *p = &x;
+int *q;
+q = p;
+*q = 25;
+printf("%d", x);
+*
+5 points
+10
+25
+Garbage value
+Compilation error
+15. What is the output of the following code snippet?
+
+int num = 100;
+int *ptr = &num;
+printf("%d", *ptr - 50);
+*
+5 points
+50
+100
+150
+Compilation error
+16. What happens with the following code?
+
+int a = 5;
+int *p = &a;
+p = 100;
+printf("%d", *p);
+*
+5 points
+Prints 5
+Prints 100
+Runtime error/Undefined behavior
+Compilation error
+17. What is the output of the following code snippet?
+
+int x = 12;
+int *ptr = &x;
+*ptr *= 2;
+printf("%d", x);
+*
+5 points
+12
+24
+Address of x
+Compilation error
+18. What is the size of a pointer variable on a 64-bit system?
+*
+5 points
+4 bytes
+8 bytes
+Depends on the data type it points to
+2 bytes
+19. What is the output of the following code snippet?
+
+int a = 3;
+int *p = &a;
+printf("%d", *p * *p);
+*
+5 points
+6
+9
+3
+Compilation error
+20. What happens in the following code?
+
+int x = 50;
+int *p = &x;
+int *q = &x;
+*p = 60;
+printf("%d", *q);
+*
+5 points
+50
+60
+Garbage value
+Compilation error
+21. What is the output of the following code snippet?
+
+int num = 8;
+int *ptr = &num;
+printf("%d", (*ptr)--);
+*
+5 points
+7
+8
+9
+Compilation error
+22. What happens with this declaration?
+
+int *ptr = NULL;
+printf("%d", *ptr);
+*
+5 points
+Prints 0
+Prints NULL
+Runtime error/Segmentation fault
+Compilation error
+23. What is the output of the following code snippet?
+
+int a = 15;
+int *p = &a;
+*p = *p / 3;
+printf("%d", a);
+*
+5 points
+15
+5
+45
+Compilation error
+24. What is the output of the following code snippet?
+
+int x = 4;
+int *ptr = &x;
+printf("%d", *ptr % 3);
+*
+5 points
+1
+4
+0
+Compilation error
+25. What happens in the following code?
+
+int a = 10;
+int *p;
+*p = a;
+printf("%d", *p);
+*
+5 points
+Prints 10
+Prints 0
+Runtime error/Undefined behavior
+Compilation error
+26. What is the output of the following code snippet?
+
+int num = 6;
+int *ptr = &num;
+*ptr += 4;
+printf("%d", num);
+*
+5 points
+6
+10
+4
+Compilation error
+27. What is wrong with this code?
+
+int *ptr;
+int x = 5;
+ptr = x;
+printf("%d", *ptr);
+*
+5 points
+Nothing wrong
+Should use &x instead of x
+Should use *x instead of x
+Should declare ptr as int
+28. What is the output of the following code snippet?
+
+int a = 20;
+int *p = &a;
+printf("%d", *p + 10);
+*
+5 points
+20
+30
+10
+Compilation error
+29. What happens in the following code?
+
+int x = 100;
+int *p = &x;
+int y = *p;
+*p = 200;
+printf("%d %d", x, y);
+5 points
+100 100
+200 100
+200 200
+100 200
+30. What is the output of the following code snippet?
+
+int a = 18;
+int *p = &a;
+*p = *p - 8;
+printf("%d", a);
+*
+5 points
+18
+10
+8
+Compilation error
