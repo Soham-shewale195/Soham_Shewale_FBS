@@ -6,34 +6,26 @@
 //If marks are more than 55 ? show "Second Class" 
 //If marks are 40 or more ? show "Pass Class" 
 //If marks are less than 40 ? show "Fail" 
-void marks();
-void main()
+void marks1(float* marks)
 {
-	marks();
-}
-void marks()
-{
-	float marks;
-	printf("Enter Marks :");
-	scanf("%f",&marks);
-	
-	if(marks>=75 && marks<=100)
+
+	if(*marks>=75 && *marks<=100)
 	{
 		printf("Distinction");
 	}
-	else if(marks>=65 && marks<=74)
+	else if(*marks>=65 && *marks<=74)
 	{
 		printf("First Class");
 	}
-	else if(marks>=55 && marks<=64)
+	else if(*marks>=55 && *marks<=64)
 	{
 		printf("Second Class");
 	}
-	else if(marks>=40 && marks<=54)
+	else if(*marks>=40 && *marks<=54)
 	{
 		printf("Pass Class");
 	}
-	else if(marks>=0 && marks<=39)
+	else if(*marks>=0 && *marks<=39)
 	{
 		printf("Fail !!");
 	}
@@ -42,3 +34,11 @@ void marks()
 		printf("Wrong input ,Try again .");
 	}
 }
+void main()
+{
+	float marks;
+	printf("Enter Marks :");
+	scanf("%f",&marks);
+	marks1(&marks);
+}
+

@@ -1,5 +1,5 @@
 #include<stdio.h>
-// Find the Number is Palindrome or not?
+//Q. Find the Number is Palindrome or not?
 //A palindrome is a word, number, phrase, or sequence that reads the
 //same forward and backward (ignoring spaces, punctuation, and capitalization in some cases).
 
@@ -7,59 +7,33 @@
 //1)Words = madam, level, radar, civic
 //Numbers = 121, 1331, 12321
 //Phrases = nurses run, never odd or even
-void three(int);
-void four(int);
-void main()
-{	
-	int num;
-	printf("\nEnter a three digit number :");
-	scanf("%d",&num);//732
-	three(num);
-	 
-	printf("\nEnter a four digit number :");
-	scanf("%d",&num);//1234
-	four(num);
-}
-void three(int num)
+void palin(int*);
+void main() 
 {
-//below code only works for three digit number.
-	int r1,r2,r3,rev,p1;
-	r1=num%10;//2
-	p1=num/10;//73
-	r2=p1%10;//3
-	r3=p1/10;//7
-	
-	rev=r1*100+r2*10+r3*1; // only work on three digit value.
-	
-	if(rev==num)  // also write as if(num%10 == num%100) only works on 3 digit value.
-	{
-		printf("\nNumber is Palindrome ");
-	}
-	else
-	{
-		printf("\nNumber is Not Palindrome");
-	}	
-}
-void four(int num)
-{	//below code only works for three digit number.
-	int r1,r2,r3,r4,rev;
-	int p1,p2;
-	r1=num%10;//4
-	p1=num/10;//123
-	r2=p1%10;//3
-	p2=p1/10;//12
-	r3= p2%10; //2
-	r4=p2/10;// 1
-	
-	rev=r1*1000+r2*100+r3*10+r4*1; // only work on three digit value.
+    int num;
 
-	if(rev==num)  // also write as if(num%10 == num%100) only works on 3 digit value.
-	{
-		printf("\nNumber is Palindrome ");
-	}
-	else
-	{
-		printf("\nNumber is Not Palindrome");
-	}
+    // Input from user
+    printf("Enter a number: ");
+    scanf("%d", &num);
+	
+	palin(&num);
+     
+}
+void palin(int* num)
+{
+	 int originalNum, reversedNum = 0, remainder;
+//	  int* originalNu;
+	 originalNum = *num; // Store original number
+	 while (*num != 0) {
+        remainder = *num % 10;              // Get last digit
+        reversedNum = reversedNum * 10 + remainder; // Build reversed number
+        *num = *num / 10;                    // Remove last digit
+    }
+
+    // Check palindrome condition
+    if (originalNum == reversedNum)
+        printf("It's a palindrome number.\n");
+    else
+        printf("It's not a palindrome number.\n");
 	
 }

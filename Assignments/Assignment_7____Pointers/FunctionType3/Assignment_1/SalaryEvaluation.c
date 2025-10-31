@@ -3,36 +3,36 @@
 //respectively.
 // functioon type 3 ,(with para without return type)
 #include<stdio.h>
-void salary(float);
+void salary(float*);
 int main()
 {
 	float Bsalary;          // Bsalary=(Base Salary) 
 	printf("Enter your Basic Salary : ");
 	scanf("%f",&Bsalary);
-	salary(Bsalary);
+	salary(&Bsalary);
 }
-void salary(float Bsalary)
+void salary(float* Bsalary)
 {
 	  
 	float DA,TA,HRA,Tsalary;  //Tsalary=(Total Salary)
 	 // Basic Salary (basic) --> the main fixed salary.
 	
-	if(Bsalary<=5000)
+	if(*Bsalary<=5000)
 	{
-		DA= Bsalary*10/100;      //DA (Dearness Allowance) 
-		TA= Bsalary* 20/100;    //TA (Travel Allowance) 
-		HRA=Bsalary*25/100;  //HRA (House Rent Allowance)
+		DA= *Bsalary*10/100;      //DA (Dearness Allowance) 
+		TA= *Bsalary* 20/100;    //TA (Travel Allowance) 
+		HRA=*Bsalary*25/100;  //HRA (House Rent Allowance)
 
-		Tsalary= Bsalary+DA+TA+HRA;
+		Tsalary= *Bsalary+DA+TA+HRA;
 		printf("Total Salary is : %.2f",Tsalary);	
 	}
 	else
 	{
-		DA= Bsalary*15/100;      //DA (Dearness Allowance) 
-		TA= Bsalary* 25/100;    //TA (Travel Allowance) 
-		HRA=Bsalary*30/100;  //HRA (House Rent Allowance)
+		DA= *Bsalary*15/100;      //DA (Dearness Allowance) 
+		TA= *Bsalary* 25/100;    //TA (Travel Allowance) 
+		HRA=*Bsalary*30/100;  //HRA (House Rent Allowance)
 		
-		Tsalary= Bsalary+DA+TA+HRA;
+		Tsalary= *Bsalary+DA+TA+HRA;
 		printf("Total Salary is : %.2f",Tsalary);
 	}
 }

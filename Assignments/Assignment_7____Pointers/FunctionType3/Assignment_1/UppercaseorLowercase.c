@@ -10,18 +10,18 @@
 //0–9:
 //'0' = 48, '1' = 49, … '9' = 57
 
-void alpha(char);
+void alpha(char*);
 int main()
 {
 	char character;
 	printf("Enter a character :");
 	scanf("%c",&character);
-	alpha(character);
+	alpha(&character);
 }
-void alpha(char character)
+void alpha(char* character)
 {
 	
-	if(character>= 'A' && character<='Z') //A = 65, B = 66, … Z = 90
+	if(*character>= 'A' && *character<='Z') //A = 65, B = 66, … Z = 90
 	{
 		printf("Uppercase .");
 	}
