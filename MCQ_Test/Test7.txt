@@ -1,0 +1,317 @@
+
+Q1: What is a string in C?
+*
+5/5
+a) A primitive data type
+b) An object
+c) An array of characters terminated by '\0'
+ 
+d) A pointer to int
+ 
+Q2: Which header file is needed to use string functions in C?
+*
+5/5
+a) stdio.h
+b) math.h
+c) stdlib.h
+d) string.h
+ 
+ 
+Q3: Which function is used to calculate the length of a string?
+*
+5/5
+a) strlen()
+ 
+b) size()
+c) length()
+d) count()
+ 
+Q4: What is the output of strlen("Hello")?
+*
+5/5
+a) 4
+b) 5
+ 
+c) 6
+d) Undefined
+ 
+Q5: Which function is used to copy one string to another in C?
+*
+5/5
+a) copy()
+b) strcopy()
+c) strcpy()
+ 
+d) strncpy()
+ 
+Q6: What will be the output?
+char str[10] = "Hello";
+printf("%c", str[5]);
+*
+0/5
+a) H
+b) o
+ 
+c) \0
+d) Garbage Value
+Correct answer
+c) \0
+ 
+Q7: What is the output of the following code?
+char str[] = "Hello";
+printf("%s", str + 1);
+*
+0/5
+a) Hello
+ 
+b) ello
+c) H
+d) Compilation Error
+Correct answer
+b) ello
+ 
+Q8: What will be printed by this code?
+char str[] = "Hello";
+printf("%d", strlen(str));
+*
+5/5
+a) 5
+ 
+b) 6
+c) 0
+d) Compilation Error
+ 
+Q9: Which function compares two strings lexicographically?
+*
+5/5
+a) strcmp()
+ 
+b) strcompare()
+c) compare()
+d) stringcmp()
+ 
+Q10: What does strcmp("abc", "abd") return?
+*
+5/5
+a) 0
+b) 1
+c) -1
+ 
+d) Compilation error
+ 
+Q11: What does strcat() function do?
+*
+5/5
+a) Reverses a string
+b) Appends one string to another
+ 
+c) Copies a string
+d) Compares two strings
+ 
+Q12: What is the result of printf("%s",strchr("hello",'l'));?
+*
+5/5
+a) hello
+b) llo
+ 
+c) lo
+d) NULL
+ 
+Q13: Which function finds the last occurrence of a character in a string?
+*
+5/5
+a) strchr()
+b) strrchr()
+ 
+c) strlast()
+d) findchar()
+ 
+Q14: What is the result of printf("%s",strrchr("hello",'l'));?
+*
+5/5
+a) hello
+b) lo
+ 
+c) llo
+d) NULL
+ 
+Q15: Which function returns a pointer to the first occurrence of a substring?
+*
+5/5
+a) strstr()
+ 
+b) substr()
+c) strsub()
+d) getstr()
+ 
+Q16: What will be the output?
+char str[] = "Hello";
+str[1] = 'a';
+printf("%s", str);
+*
+5/5
+a) Hallo
+ 
+b) Hello
+c) H
+d) Compilation Error
+ 
+Q17: Which function safely copies a limited number of characters from one string to another?
+*
+5/5
+a) strcpy()
+b) strncpy()
+ 
+c) strlcpy()
+d) strcopy()
+ 
+Q18: What will be printed?
+char str[] = "World";
+printf("%c", *(str + 3));
+*
+5/5
+a) o
+b) l
+ 
+c) r
+d) d
+ 
+Q19: What happens when printf("%s", str++); is used where str is an array?
+*
+5/5
+a) Hello
+b) Compilation Error
+ 
+c) Runtime Error
+d) Garbage Value
+ 
+Q20: Which function is used to reverse a string?
+*
+5/5
+a) strrev()
+ 
+b) reverse()
+c) revstr()
+d) strreverse()
+ 
+Q21: What will be the output?
+char str[] = "Hello";
+printf("%s", strstr(str, "lo"));
+*
+5/5
+a) Hello
+b) lo
+ 
+c) llo
+d) NULL
+ 
+Q22: How is null character represented in C?
+*
+5/5
+a) \n
+b) \0
+ 
+c) NULL
+d) EOF
+ 
+Q23: What is the output of strcmp("abc", "abc")?
+*
+5/5
+a) 1
+b) 0
+ 
+c) -1
+d) NULL
+ 
+Q24: What is the result of printf("%c", *(str + 2)); where str[] = "Code"?
+*
+5/5
+a) C
+b) o
+c) d
+ 
+d) e
+ 
+Q25: What will be the output?
+char str[10] = "abc";
+strcat(str, "de");
+printf("%s", str);
+*
+5/5
+a) abcde
+ 
+b) abc
+c) de
+d) Compilation Error
+ 
+Q26: What will be the output of the following code?
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str1[20] = "Good";
+  char str2[] = "Morning";
+  strcpy(str1 + 4, str2);
+  printf("%s", str1);
+  return 0;
+}
+*
+0/5
+a) GoodMorning
+b) Good
+c) Morning
+ 
+d) Compilation Error
+Correct answer
+a) GoodMorning
+ 
+Q27: What is the result?
+char *str = "Hello";
+printf("%c", *(str + 4));
+*
+0/5
+a) H
+ 
+b) o
+c) l
+d) Compilation Error
+Correct answer
+b) o
+ 
+Q28: What will the following code print?
+char str[] = "abcdef";
+str[3] = '\0';
+printf("%s", str);
+*
+5/5
+a) abc
+ 
+b) abcd
+c) abc\0ef
+d) Error
+ 
+Q29: What is the output?
+char str[10] = "";
+strcpy(str, "xyz");
+printf("%d", strlen(str));
+*
+0/5
+a) 3
+b) 2
+ 
+c) 0
+d) Compilation Error
+Correct answer
+a) 3
+ 
+Q30: What will the output be?
+char str1[] = "FBS";
+char str2[10];
+strcpy(str2, str1);
+printf("%s", str2);
+*
+5/5
+a) FBS
+ 
+b) str1
+c) str2
+d) Compilation Error
