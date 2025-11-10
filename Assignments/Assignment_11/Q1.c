@@ -14,7 +14,6 @@ void main()
 
     printf("Copied string is: %s", str2);
 }
-
 void mystrcpy(char *dest, char *src)
 {
     int i = 0;
