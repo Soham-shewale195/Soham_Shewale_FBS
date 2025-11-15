@@ -1,0 +1,408 @@
+Full Name
+First Name - Middle Name - Last Name
+*
+Soham Mahesh Shewale
+Q1: What does the term "structure" refer to in C programming?
+*
+A) A user define data tyape binds various data types
+B) A loop control statement
+C) A conditional statement
+D) A memory allocation function
+Q2: Which operator is used to allocate memory for a structure dynamically in C?
+*
+A) malloc
+B) free
+C) sizeOf
+D) new
+Q3: Which statement is used to free the memory allocated to a structure in C?
+*
+A) free(struct_variable);
+B) delete(struct_variable);
+C) remove(struct_variable);
+D) dealloc(struct_variable);
+Q4: What is the maximum number of members a structure can have in C?
+*
+A) 10
+B) 25
+C) 50
+D) Unlimited
+Q5: What is the scope of a structure member in C?
+*
+A) Local to the function where it is declared
+B) Global to the entire program
+C) Limited within the structure only
+D) Can be both local and global based on declaration
+Q6: What is the syntax to declare a structure in C?
+*
+A) struct_name{ member1_type; member2_type }
+B) struct <struct_name> { <member1_type> <member1_name>; <member2_type> <member2_name>; ... };
+C) structure <struct_name> { <member1_type> <member1_name>; <member2_type> <member2_name>; ... };
+D) struct <struct_name> ( <member1_type> <member1_name>, <member2_type> <member2_name>, ... );
+Q7: How can members of a structure be accessed in C?
+*
+A) Using the asterisk (*) operator
+B) Using the arrow (->) operator
+C) Using the dot (.) operator
+D) Using the percent (%) operator
+Q8: What is the size of a structure in C?
+*
+A) Sum of the sizes of its members
+B) Maximum size of its members
+C) Minimum size of its members
+D) Size is not defined for structures
+Q9: What is the purpose of the typedef keyword in C?
+*
+A) To define a structure
+B) To create an alias for a data type
+C) To declare a structure
+D) To create a pointer to a structure
+Q10: What is the purpose of the sizeof operator in C?
+*
+A) To assign a size to a structure
+B) To determine the size of a variable or data type
+C) To calculate the sum of sizes of members in a structure
+D) To calculate the size of a member in a union
+Q11: What is the purpose of the register keyword in a structure member declaration in C?
+*
+A) register is not used with structure members
+B) To specify that the member is register-based
+C) To specify that the member is shared
+D) To specify that the member is static
+Q12: What is the output of the following code?
+#include <stdio.h>
+struct student { char name[20]; int age; };
+void main() {
+struct student s;
+s.age = 21;
+printf("Age: %d", s.age);
+}
+*
+A) Age: 20
+B) Age: 21
+C) Age: 0
+D) Error: Variable 's' not initialized
+Q13: The correct syntax to access the member of the ith structure in the array of structures is?
+*
+A) s.b.[i];
+B) s.[i].b;
+C) s.b[i];
+D) s[i].b;
+Q14: What is the output of the following code?
+void main() {
+structure hotel {
+int items;
+char name[10];
+} a;
+strcpy(a.name, "TAJ");
+a.items = 10;
+printf("%s", a.name);
+}
+*
+A) TAJ
+B) Empty string
+C) Compiler error
+D) None of the above
+Q15: What will be the output of the following code?
+struct Student {
+char name[20];
+int age;
+};
+void main() {
+struct Student s;
+printf("%d", sizeof(s));
+}
+*
+A) 24
+B) 20
+C) 32
+D) 16
+Q16: What will be the output of the following code?
+#include <stdio.h>
+struct student {
+char name[20];
+int age;
+float marks;
+};
+void main() {
+struct student s;
+s.age = 21;
+s.marks = 85.5;
+printf("%d  %.2f", age, marks);
+}
+*
+A) 21 85.5
+B) 0 0.0
+C) Garbage values
+D) Compiler error
+Q17: What will be the output of the following code?
+#include <stdio.h>
+#include <string.h>
+typedef struct Person {
+char name[50];
+int citNo;
+float salary;
+} Person;
+void main() {
+Person p1;
+strcpy(p1.name, "George Orwell");
+p1.citNo = 1984;
+p1.salary = 2500;
+printf("Name: %s", p1.name);
+}
+*
+A) george orwell
+B) compilation error
+C) Name: George Orwell
+D) Name: George Orwell Citizenship No.: 1984
+Q18: What will be the size of the following structure?
+#include <stdio.h>
+struct temp {
+int a[10];
+char p;
+};
+*
+A) 5
+B) 11
+C) 41
+D) 44
+Q19: What will be the output of the following code?
+#include <stdio.h>
+struct Point {
+int x;
+int y;
+};
+void main() {
+struct Point p;
+p.x=5;
+p.y=10;
+struct Point q;
+printf("p: %d, %d\n", p.x, p.y);
+printf("q: %d, %d\n", q.x, q.y);
+}
+*
+A) p: 5, 10
+B) p: 5, 10 and q: undefined behavior (unpredictable values)
+C) Compiler Error
+D) Both print 0, 0
+Q20: What will be the output of the following code?
+#include <stdio.h>
+struct Point {
+int x;
+int y;
+};
+void main() {
+struct Point p;
+printf("%p\n", &p);
+}
+*
+A) Garbage values
+B) 0
+C) Address of the structure variable
+D) Compiler Error
+Q21: What will be the output of the following code?
+#include <stdio.h>
+struct Point {
+int x;
+int y;
+};
+void main() {
+struct Point p;
+p.x=5;
+p.y=10;
+p.x = p.x + p.y;
+p.y = p.x - p.y;
+printf("%d, %d", p.x, p.y);
+}
+*
+A) 5, 10
+B) 15, 5
+C) 10, 5
+D) 15, 10
+Q22: What will be the output of the following code?
+#include <stdio.h>
+struct Point {
+int x, y;
+};
+void modify(struct Point p) {
+p.x = 100;
+p.y = 200;
+}
+void main() {
+struct Point pt;
+pt.x=5;
+pt.y=10;
+modify(pt);
+printf("%d, %d\n", pt.x, pt.y);
+}
+*
+A) Garbage values
+B) 100, 200
+C) 5, 10
+D) Compiler Error
+Q23: Which of the following is the correct way to access a structure member using a pointer?
+struct Point {
+int x;
+int y;
+};
+void main() {
+struct Point pt;
+pt.x = 10;
+pt.y = 20;
+struct Point *ptr = &pt;
+}
+*
+A) ptr.x
+B) ptr->x
+C) *ptr.x
+D) ptr[x]
+Q24: What will be the output of the following code?
+#include <stdio.h>
+struct Counter {
+int count;
+};
+void increment(struct Counter *c) {
+c->count = c->count + 1;
+}
+void main() {
+struct Counter cnt;
+cnt.count = 5;
+increment(&cnt);
+printf("%d", cnt.count);
+}
+*
+A) 5
+B) 6
+C) 0
+D) Compiler Error
+Q25: What will be the output of the following code?
+#include <stdio.h>
+struct Student {
+int roll;
+float marks;
+};
+void main() {
+struct Student s1, s2;
+s1.roll = 101;
+s1.marks = 85.5;
+s2.roll = s1.roll;
+s2.marks = s1.marks + 5.0;
+printf("%.1f", s2.marks);
+}
+*
+A) 85.5
+B) 90.5
+C) 5.0
+D) Compiler Error
+Q26: What will be the output of the following code?
+#include <stdio.h>
+struct Point {
+int x;
+int y;
+};
+void swap(struct Point *p1, struct Point *p2) {
+int temp = p1->x;
+p1->x = p2->x;
+p2->x = temp;
+}
+void main() {
+struct Point a, b;
+a.x = 5;
+a.y = 10;
+b.x = 15;
+b.y = 20;
+swap(&a, &b);
+printf("%d %d", a.x, b.x);
+}
+*
+A) 5 15
+B) 15 5
+C) 10 20
+D) 20 10
+Q27: What will be the output of the following code?
+#include <stdio.h>
+struct Rectangle {
+int length;
+int width;
+};
+void calculate(struct Rectangle *r) {
+r->length = r->length * 2;
+r->width = r->width * 2;
+}
+void main() {
+struct Rectangle rect;
+rect.length = 5;
+rect.width = 3;
+struct Rectangle *p = &rect;
+calculate(p);
+printf("%d %d", rect.length, rect.width);
+}
+*
+A) 5 3
+B) 10 6
+C) 25 9
+D) Compiler Error
+Q28: What will be the output of the following code?
+#include <stdio.h>
+typedef struct Circle {
+int radius;
+float area;
+} Circle;
+void calculateArea(Circle *c) {
+c->area = 3.14 * c->radius * c->radius;
+}
+void main() {
+Circle shapes[2];
+shapes[0].radius = 5;
+shapes[1].radius = 3;
+calculateArea(&shapes[0]);
+calculateArea(&shapes[1]);
+printf("%.2f %.2f", shapes[0].area, shapes[1].area);
+}
+*
+A) 78.50 28.26
+B) 25.00 9.00
+C) 15.70 9.42
+D) 78.50 28.26
+Q29: What will be the output of the following code?
+#include <stdio.h>
+struct Product {
+int id;
+float price;
+};
+void main() {
+struct Product products[3];
+products[0].id = 1;
+products[0].price = 10.5;
+products[1].id = 2;
+products[1].price = 20.0;
+products[2].id = 3;
+products[2].price = 15.75;
+printf("%.2f", products[0].price + products[2].price);
+}
+*
+A) 26.25
+B) 30.50
+C) 46.25
+D) 35.75
+Q30: What will be the output of the following code?
+#include <stdio.h>
+struct Counter {
+int count;
+int total;
+};
+void main() {
+struct Counter counters[2];
+counters[0].count = 5;
+counters[0].total = 0;
+counters[1].count = 3;
+counters[1].total = 0;
+for(int i = 0; i < 2; i++) {
+counters[i].total = counters[i].count * 10;
+}
+printf("%d %d", counters[0].total, counters[1].total);
+}
+*
+A) 0 0
+B) 5 3
+C) 50 30
+D) 15 15
