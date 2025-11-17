@@ -1,7 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
+/*
+Book Management System Requirements:
+------------------------------------
+Features to Implement:
+1. Add Book (ID, Name, Author, Category, Price, Rating)
+2. Remove Book
+3. Search Book by ID or Name
+4. Show Books by Author
+5. Show Books by Category
+6. Update Book Price & Rating
+7. Display Sorted Books (by Price / Rating)
+8. Display All Books
+*/
 typedef struct Book
 {
     int ID;
@@ -12,12 +24,13 @@ typedef struct Book
     float rating;
 }Book;
 
-void storeBook(Book *b1, int size);
+void storeBook(Book **b1, int *size);
 void displayBook(Book *b1, int size);
+void removeBook(Book **b1, int *size);
 
-void main()
+int main()
 {
-    Book *b1 ;
+    Book *b1 = NULL;
     int size = 0;
     int choice;
 
@@ -26,29 +39,32 @@ void main()
         printf("\n================ MENU ================\n");
         printf("1. Add Books\n");
         printf("2. Display Books\n");
+        printf("3. Remove Book\n");
         printf("6. Exit\n");
         printf("Enter choice: ");
         scanf("%d",&choice);
 
         if(choice == 1)
         {
-            printf("How many books you want to add: ");
-            scanf("%d",&size);
-
-            b1 = malloc(sizeof(Book) * size);
-
-            storeBook(b1, size);
+            storeBook(&b1, &size);
         }
         else if(choice == 2)
         {
-            if(b1 == '\0')   // null checks.
-                printf("\nNo books stored yet!\n");
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
             else
                 displayBook(b1, size);
         }
+        else if(choice == 3)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                removeBook(&b1, &size);
+        }
         else if(choice == 6)
         {
-            printf("Exiting program...\n");
+            printf("\nExiting program...\n");
             break;
         }
         else
@@ -57,32 +73,41 @@ void main()
         }
     }
 
-    free(b1);   // free heap memory.
-
+    free(b1);
+    return 0;
 }
 
-void storeBook(Book *b1, int size)
+void storeBook(Book **b1, int *size)
 {
-    for(int i=0;i<size;i++)
+    int newsize;
+    printf("How many books you want to add: ");
+    scanf("%d",&newsize);
+
+    *b1 = realloc(*b1, (*size + newsize) * sizeof(Book));
+
+    for(int i=*size; i < *size + newsize; i++)
     {
         printf("\nEnter Book Id: ");
-        scanf("%d",&b1[i].ID);
+        scanf("%d",&(*b1)[i].ID);
 
         printf("Enter Book Name: ");
-        scanf(" %[^\n]s",b1[i].name);  // " %[^\n]s " use to store words with space but not new line(\n or Enter).
+        scanf(" %[^\n]s",(*b1)[i].name);
 
         printf("Enter Book Author: ");
-        scanf(" %[^\n]s",b1[i].author);
+        scanf(" %[^\n]s",(*b1)[i].author);
 
         printf("Enter Book Category: ");
-        scanf(" %[^\n]s",b1[i].category);
+        scanf(" %[^\n]s",(*b1)[i].category);
 
         printf("Enter Book Price: ");
-        scanf("%f",&b1[i].price);
+        scanf("%f",&(*b1)[i].price);
 
         printf("Enter Book Rating (0-5): ");
-        scanf("%f",&b1[i].rating);
+        scanf("%f",&(*b1)[i].rating);
     }
+
+    *size += newsize;
+    printf("\nBooks Added Successfully!\n");
 }
 
 void displayBook(Book *b1, int size)
@@ -93,6 +118,33 @@ void displayBook(Book *b1, int size)
         printf("\nID: %d\nName: %s\nAuthor: %s\nCategory: %s\nPrice: %.2f\nRating: %.2f\n",
             b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
     }
-    printf("===========================================\n");
+}
+
+void removeBook(Book **b1, int *size)
+{
+    char bname[50];
+    printf("\nEnter book name to remove: ");
+    scanf(" %[^\n]s", bname);
+
+    for(int i=0; i < *size; i++)
+    {
+        if(strcmp((*b1)[i].name, bname) == 0)
+        {
+            // Shift elements
+            for(int j=i; j < *size - 1; j++)
+            {
+                (*b1)[j] = (*b1)[j + 1];
+            }
+
+            (*size)--;
+
+            *b1 = realloc(*b1, (*size) * sizeof(Book));
+
+            printf("\nBook \"%s\" removed successfully.\n", bname);
+            return;
+        }
+    }
+
+    printf("\nBook not found!\n");
 }
 

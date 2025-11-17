@@ -6,7 +6,13 @@ Book Management System Requirements:
 ------------------------------------
 Features to Implement:
 1. Add Book (ID, Name, Author, Category, Price, Rating)
-2. Display All Books
+2. Remove Book
+3. Search Book by ID or Name
+4. Show Books by Author
+5. Show Books by Category
+6. Update Book Price & Rating
+7. Display Sorted Books (by Price / Rating)
+8. Display All Books
 */
 
 typedef struct Book
