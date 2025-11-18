@@ -27,6 +27,7 @@ typedef struct Book
 void storeBook(Book **b1, int *size);
 void displayBook(Book *b1, int size);
 void removeBook(Book **b1, int *size);
+void SearchBookById(Book *b1, int size);
 
 int main()
 {
@@ -38,8 +39,9 @@ int main()
     {
         printf("\n================ MENU ================\n");
         printf("1. Add Books\n");
-        printf("2. Display Books\n");
+        printf("2. Display All Books\n");
         printf("3. Remove Book\n");
+        printf("4. Search Book\n");
         printf("6. Exit\n");
         printf("Enter choice: ");
         scanf("%d",&choice);
@@ -61,6 +63,13 @@ int main()
                 printf("\nNo books available!\n");
             else
                 removeBook(&b1, &size);
+        }
+        else if(choice == 4)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                SearchBookById(b1,size);
         }
         else if(choice == 6)
         {
@@ -109,7 +118,7 @@ void storeBook(Book **b1, int *size)
     *size += newsize;
     printf("\nBooks Added Successfully!\n");
 }
-
+// display all books
 void displayBook(Book *b1, int size)
 {
     printf("\n================ BOOK LIST ================\n");
@@ -119,7 +128,7 @@ void displayBook(Book *b1, int size)
             b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
     }
 }
-
+//remove book
 void removeBook(Book **b1, int *size)
 {
     char bname[50];
@@ -147,4 +156,24 @@ void removeBook(Book **b1, int *size)
 
     printf("\nBook not found!\n");
 }
+//Show Book By ID
+void SearchBookById(Book *b1, int size)
+{
+	int bid;
+	printf("Enter the book ID:");
+	scanf(" %d",&bid);
+	for(int i=0;i<size;i++)
+	{
+		if(bid==b1[i].ID)
+		{
+			printf("\nID: %d\nName: %s\nAuthor: %s\nCategory: %s\nPrice: %.2f\nRating: %.2f\n",
+            b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
+		}
+		else
+		{
+			printf("There is no such book available.");
+		}
+	}
+}
 
+//update book price and rating

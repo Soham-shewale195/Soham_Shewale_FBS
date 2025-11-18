@@ -17,71 +17,166 @@ Features to Implement:
 
 typedef struct Book
 {
-		int ID;
-		char name[50];
-		char author[50];
-		char category[50];
-		float price;
-		float rating;
-		
+    int ID;
+    char name[50];
+    char author[50];
+    char category[50];
+    float price;
+    float rating;
 }Book;
-void storeBook(Book *b1,int size);
-void displayBook(Book *b1,int size);
 
-void main()
+void storeBook(Book **b1, int *size);
+void displayBook(Book *b1, int size);
+void removeBook(Book **b1, int *size);
+void SearchBookById(Book *b1, int size);
+
+int main()
 {
-	int size;
-	Book *b1; // b1 is pointer cause we store malloc address in it.
-	
-	printf("How many books you want to add: ");
-	scanf("%d",&size);
-	b1=malloc(sizeof(Book)*size);    // book is struct (user define datatype).
+    Book *b1 = NULL;
+    int size = 0;
+    int choice;
 
+    while(1)
+    {
+        printf("\n================ MENU ================\n");
+        printf("1. Add Books\n");
+        printf("2. Display Books\n");
+        printf("3. Remove Book\n");
+        printf("4. Search Book\n");
+        printf("6. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d",&choice);
 
-	storeBook(b1,size);
-	displayBook(b1,size);             // b2 is already an array (decays to pointer)
-		
+        if(choice == 1)
+        {
+            storeBook(&b1, &size);
+        }
+        else if(choice == 2)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                displayBook(b1, size);
+        }
+        else if(choice == 3)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                removeBook(&b1, &size);
+        }
+        else if(choice == 4)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                SearchBookById(b1,size);
+        }
+        else if(choice == 6)
+        {
+            printf("\nExiting program...\n");
+            break;
+        }
+        else
+        {
+            printf("\nInvalid choice, try again.\n");
+        }
+    }
+
+    free(b1);
+    return 0;
 }
 
-void storeBook(Book *b1,int size)
+void storeBook(Book **b1, int *size)
 {
-	printf("Enter Book Details:\n");
-	for(int i=0;i<size;i++)
-	{
-	
-		printf("\nEnter Book Id: ");
-		scanf("%d",&b1[i].ID);           // use (->) instead (.) when using pointer.
-		printf("Enter Book Name: ");
-		scanf(" %[^\n]s",b1[i].name);           // "%[^\n]s" =Read characters until you reach a newline, including spaces."
-		printf("Enter Book Author : ");
-		scanf(" %[^\n]s",b1[i].author);
-		printf("Enter Book Category : ");
-		scanf(" %[^\n]s",b1[i].category);
-		printf("Enter Book Price : ");
-		scanf("%f",&b1[i].price);
-		printf("Enter Book Rating(0 to 5) :");
-		scanf("%f",&b1[i].rating);
-	}
+    int newsize;
+    printf("How many books you want to add: ");
+    scanf("%d",&newsize);
+
+    *b1 = realloc(*b1, (*size + newsize) * sizeof(Book));
+
+    for(int i=*size; i < *size + newsize; i++)
+    {
+        printf("\nEnter Book Id: ");
+        scanf("%d",&(*b1)[i].ID);
+
+        printf("Enter Book Name: ");
+        scanf(" %[^\n]s",(*b1)[i].name);
+
+        printf("Enter Book Author: ");
+        scanf(" %[^\n]s",(*b1)[i].author);
+
+        printf("Enter Book Category: ");
+        scanf(" %[^\n]s",(*b1)[i].category);
+
+        printf("Enter Book Price: ");
+        scanf("%f",&(*b1)[i].price);
+
+        printf("Enter Book Rating (0-5): ");
+        scanf("%f",&(*b1)[i].rating);
+    }
+
+    *size += newsize;
+    printf("\nBooks Added Successfully!\n");
 }
-//display all books
 
 void displayBook(Book *b1, int size)
 {
-	// for hard coded values
-	printf("--------------------------------------------------------------------------------------\n");
-	printf("Display books: \n");
-	for(int i=0;i< size;i++)
-	{
-		printf("\n ID : %d\n Name : %s\n Author: %s\n Category: %s\n Price: %.2f rs\n Rating: %.2f\n",
-		b1[i].ID,b1[i].name,b1[i].author,b1[i].category,b1[i].price,b1[i].rating);
-		//here we are not using (->) cause its hard coded values.
-	}
-	printf("--------------------------------------------------------------------------------------\n");
-
-free(b1);
+    printf("\n================ BOOK LIST ================\n");
+    for(int i=0;i<size;i++)
+    {
+        printf("\nID: %d\nName: %s\nAuthor: %s\nCategory: %s\nPrice: %.2f\nRating: %.2f\n",
+            b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
+    }
 }
 
+void removeBook(Book **b1, int *size)
+{
+    char bname[50];
+    printf("\nEnter book name to remove: ");
+    scanf(" %[^\n]s", bname);
 
+    for(int i=0; i < *size; i++)
+    {
+        if(strcmp((*b1)[i].name, bname) == 0)
+        {
+            // Shift elements
+            for(int j=i; j < *size - 1; j++)
+            {
+                (*b1)[j] = (*b1)[j + 1];
+            }
+
+            (*size)--;
+
+            *b1 = realloc(*b1, (*size) * sizeof(Book));
+
+            printf("\nBook \"%s\" removed successfully.\n", bname);
+            return;
+        }
+    }
+
+    printf("\nBook not found!\n");
+}
+//Show Book By ID
+void SearchBookById(Book *b1, int size)
+{
+	int bid;
+	printf("Enter the book ID:");
+	scanf(" %d",&bid);
+	for(int i=0;i<size;i++)
+	{
+		if(bid==b1[i].ID)
+		{
+			printf("\nID: %d\nName: %s\nAuthor: %s\nCategory: %s\nPrice: %.2f\nRating: %.2f\n",
+            b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
+		}
+		else
+		{
+			printf("There is no such book available.");
+		}
+	}
+	
+}
 
 
 
