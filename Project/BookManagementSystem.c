@@ -28,20 +28,22 @@ void storeBook(Book **b1, int *size);
 void displayBook(Book *b1, int size);
 void removeBook(Book **b1, int *size);
 void SearchBookById(Book *b1, int size);
+void UpdateBook(Book **b1, int *size);
 
 int main()
 {
     Book *b1 = NULL;
     int size = 0;
     int choice;
-
+ 
     while(1)
     {
         printf("\n================ MENU ================\n");
         printf("1. Add Books\n");
-        printf("2. Display All Books\n");
+        printf("2. Display Books\n");
         printf("3. Remove Book\n");
         printf("4. Search Book\n");
+        printf("5. Update Book Price & Rating \n");
         printf("6. Exit\n");
         printf("Enter choice: ");
         scanf("%d",&choice);
@@ -70,6 +72,13 @@ int main()
                 printf("\nNo books available!\n");
             else
                 SearchBookById(b1,size);
+        }
+        else if(choice == 5)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                UpdateBook(&b1,&size);   // need address to pass , so use '&'.
         }
         else if(choice == 6)
         {
@@ -118,7 +127,7 @@ void storeBook(Book **b1, int *size)
     *size += newsize;
     printf("\nBooks Added Successfully!\n");
 }
-// display all books
+
 void displayBook(Book *b1, int size)
 {
     printf("\n================ BOOK LIST ================\n");
@@ -128,7 +137,7 @@ void displayBook(Book *b1, int size)
             b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
     }
 }
-//remove book
+
 void removeBook(Book **b1, int *size)
 {
     char bname[50];
@@ -161,7 +170,7 @@ void SearchBookById(Book *b1, int size)
 {
 	int bid;
 	printf("Enter the book ID:");
-	scanf(" %d",&bid);
+	scanf(" %d",&bid);                // add name option to search book here.
 	for(int i=0;i<size;i++)
 	{
 		if(bid==b1[i].ID)
@@ -174,6 +183,32 @@ void SearchBookById(Book *b1, int size)
 			printf("There is no such book available.");
 		}
 	}
+	
+}
+// Update Book price and ratings
+void UpdateBook(Book **b1, int *size)
+{
+	int bid,count=0;
+	printf("\nEnter book Id for Update book information:");
+	scanf(" %d",&bid);
+	for(int i=0;i<*size;i++)
+	{
+		if(bid==(*b1)[i].ID)
+		{
+			printf("Enter the update price : ");
+			scanf("%f",&(*b1)[i].price);
+			
+			printf("Enter the update rating : ");
+			scanf("%f",&(*b1)[i].rating);
+			count=1;
+		}
+		
+	}
+	if(count=1)
+		printf("Book Added Successfully.");
+	else
+		printf("There is no such book available.");
+
 }
 
 //update book price and rating
