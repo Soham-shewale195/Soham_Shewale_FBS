@@ -30,6 +30,7 @@ void displayBook(Book *b1, int size);
 void removeBook(Book **b1, int *size);
 void SearchBookById(Book *b1, int size);
 void UpdateBook(Book **b1, int *size);
+void displaySortedBook(Book *b1, int size);
 
 int main()
 {
@@ -45,7 +46,8 @@ int main()
         printf("3. Remove Book\n");
         printf("4. Search Book\n");
         printf("5. Update Book Price & Rating \n");
-        printf("6. Exit\n");
+        printf("6. Display Sorted Books (by Price / Rating)\n");
+        printf("7. Exit\n");
         printf("Enter choice: ");
         scanf("%d",&choice);
 
@@ -82,6 +84,13 @@ int main()
                 UpdateBook(&b1,&size);   // need address to pass , so use '&'.
         }
         else if(choice == 6)
+        {
+            if(b1 == NULL || size == 0)
+                printf("\nNo books available!\n");
+            else
+                displaySortedBook(b1, size);
+        }
+        else if(choice == 7)
         {
             printf("\nExiting program...\n");
             break;
@@ -169,21 +178,21 @@ void removeBook(Book **b1, int *size)
 //Show Book By ID
 void SearchBookById(Book *b1, int size)
 {
-	int bid;
+	int bid,count=0;
 	printf("Enter the book ID:");
-	scanf(" %d",&bid);                // add name option to search book here.
+	scanf(" %d",&bid);               
 	for(int i=0;i<size;i++)
 	{
 		if(bid==b1[i].ID)
 		{
 			printf("\nID: %d\nName: %s\nAuthor: %s\nCategory: %s\nPrice: %.2f\nRating: %.2f\n",
             b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);
-		}
-		else
-		{
-			printf("There is no such book available.");
-		}
+			count=1;
+			break;
+		}	
 	}
+    if(count==0)
+        printf("There is no such book available.\n");
 	
 }
 // Update Book price and ratings
@@ -205,16 +214,39 @@ void UpdateBook(Book **b1, int *size)
 		}
 		
 	}
-	if(count=1)
-		printf("Book Added Successfully.");
+	if(count==1)
+		printf("Updated Successfully.");
 	else
 		printf("There is no such book available.");
 
 
 }
 
-
-
+//Display Sorted Books (by Price / Rating)
+void displaySortedBook(Book *b1, int size)
+{
+     Book temp;
+ 	   
+    for(int i=0;i<size-1;i++)  // How many rounds of sorting?
+    {
+    	for(int j=0;j<size-i-1;j++) //which pairs should I compare?”
+    	{
+	    	if(b1[j].price > b1[j+1].price) // place greater price books to right .
+	    	{
+	    		temp=b1[j];
+	    		b1[j]=b1[j+1];
+	    		b1[j+1]=temp;
+			}
+		}
+    }
+        printf("\n================ SORTED BOOK LIST ================\n");
+    for(int i=0;i<size;i++)
+    {
+     	printf("\nID: %d\nName: %s\nAuthor: %s\nCategory: %s\nPrice: %.2f\nRating: %.2f\n",
+    	b1[i].ID, b1[i].name, b1[i].author, b1[i].category, b1[i].price, b1[i].rating);      
+    }
+   
+}
 
 
 
